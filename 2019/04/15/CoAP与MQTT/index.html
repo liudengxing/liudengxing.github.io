@@ -46,7 +46,7 @@
     
     <title>
         
-            重新起航 | 
+            CoAP与MQTT协议 | 
         
         六等星的小宇宙
     </title>
@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="Blog">
+    <meta name="keywords" content="Blog,物联网">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -218,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="六等星的小宇宙">
-    <meta name="msapplication-starturl" content="http://nightmare233.top/2019/03/11/hello-world/">
+    <meta name="msapplication-starturl" content="http://nightmare233.top/2019/04/15/CoAP与MQTT/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="六等星的小宇宙">
@@ -233,16 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://nightmare233.top/2019/03/11/hello-world/">
+    <meta property="og:url" content="http://nightmare233.top/2019/04/15/CoAP与MQTT/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="重新起航 | 六等星的小宇宙">
+    <meta property="og:title" content="CoAP与MQTT协议 | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="物联网"> 
 
     
-        <meta property="article:published_time" content="Mon Mar 11 2019 15:06:00 GMT+0800">
-        <meta property="article:modified_time" content="Sat Apr 06 2019 21:17:37 GMT+0800">
+        <meta property="article:published_time" content="Mon Apr 15 2019 16:21:39 GMT+0800">
+        <meta property="article:modified_time" content="Mon Apr 15 2019 17:18:11 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://nightmare233.top/2019/03/11/hello-world/index.html">
+        <link rel="canonical" href="http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://nightmare233.top/2019/03/11/hello-world/index.html",
-    "headline": "重新起航",
-    "datePublished": "Mon Mar 11 2019 15:06:00 GMT+0800",
-    "dateModified": "Sat Apr 06 2019 21:17:37 GMT+0800",
+    "mainEntityOfPage": "http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html",
+    "headline": "CoAP与MQTT协议",
+    "datePublished": "Mon Apr 15 2019 16:21:39 GMT+0800",
+    "dateModified": "Mon Apr 15 2019 17:18:11 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "Blog",
+    "keywords": ",物联网Blog",
     "description": "",
 }
 </script>
@@ -343,6 +343,14 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是CoAP与MQTT协议？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是CoAP与MQTT协议？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#什么事CoAP协议？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么事CoAP协议？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#CoAP协议特点"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">CoAP协议特点</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#CoAP协议的四种消息类型"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">CoAP协议的四种消息类型</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#CoAP的标准格式"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">CoAP的标准格式</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -359,11 +367,20 @@
                 
     <!-- Paradox Post Header -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnail/article_01_20190311.jpg)">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
     
             <p class="article-headline-p">
-                重新起航
+                CoAP与MQTT协议
             </p>
         </div>
 
@@ -382,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>NiGHTMARE</strong>
-        <span>3月 11, 2019</span>
+        <span>4月 15, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -400,6 +417,15 @@
 
     <!-- Tags (bookmark) -->
     
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/物联网/">物联网</a>
+    </li></ul>
+    
 
     <!-- Share -->
     
@@ -414,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=重新起航&url=http://nightmare233.top/2019/03/11/hello-world/index.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CoAP与MQTT协议&url=http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -423,7 +449,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=重新起航&url=http://nightmare233.top/2019/03/11/hello-world/index.html&via=NiGHTMARE" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CoAP与MQTT协议&url=http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html&via=NiGHTMARE" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -432,7 +458,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/2019/03/11/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -441,7 +467,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/2019/03/11/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -466,7 +492,35 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>今天，重新上路！</p>
+        <p><em>这是六等星的小宇宙的第 11 篇文章<br>写作时间 : 0小时<br>预计阅读时间 : 0分钟</em></p>
+<h3 id="什么是CoAP与MQTT协议？"><a href="#什么是CoAP与MQTT协议？" class="headerlink" title="什么是CoAP与MQTT协议？"></a>什么是CoAP与MQTT协议？</h3><p>MQTT与CoAP都是为资源受限型的设备而设计的通信协议，在物联网领域有着广泛的应用。  </p>
+<h4 id="什么事CoAP协议？"><a href="#什么事CoAP协议？" class="headerlink" title="什么事CoAP协议？"></a>什么事CoAP协议？</h4><p>Coap（Constrained Application Protocol）是一种应用于物联网领域的类WEB协议，CoAP直译为“受限应用协议”。顾名思义，CoAP协议一般用于资源受限的物联网设备上，在这类设备上的ram，rom通常都非常小，TCP/HTTP对于这类设备就显得过于庞大而不适用。</p>
+<h6 id="CoAP协议特点"><a href="#CoAP协议特点" class="headerlink" title="CoAP协议特点"></a>CoAP协议特点</h6><ul>
+<li>CoAP协议的网络传输层由TCP改为UDP</li>
+<li>CoAP基于REST</li>
+<li>格式是二进制格式</li>
+<li>协议轻量化，最小长度仅为4b，仅为HTTP头文件大小的十分之一左右</li>
+<li>支持可靠传输，数据重传，块传输</li>
+<li>支持IP多播</li>
+<li>非长连接通信，适用于低功耗物联网场景</li>
+</ul>
+<h6 id="CoAP协议的四种消息类型"><a href="#CoAP协议的四种消息类型" class="headerlink" title="CoAP协议的四种消息类型"></a>CoAP协议的四种消息类型</h6><ul>
+<li>CON<br>需要被确认的请求。如CON请求被发送，则接收方必须做出响应。CoAP以此实现<strong>可靠</strong>响应。</li>
+<li>NON<br>不需要被确认的请求。如NON请求被发送，接收方不必对请求作出响应。适用于消息会频繁重复被发送且丢包不影响正常操作的情况。在NON基础上的请求服务为<strong>不可靠</strong>消息传输。</li>
+<li>ACK<br>ACK为对于CON所做出的消息应答</li>
+<li>RST<br>RST为复位消息，在<strong>可靠传输</strong>时接收到无法解析的消息或错误时，必须回应RST消息。</li>
+</ul>
+<h5 id="CoAP的标准格式"><a href="#CoAP的标准格式" class="headerlink" title="CoAP的标准格式"></a>CoAP的标准格式</h5><p><img src="/img/Article/CoAP标准格式.jpg" alt="CoAP标准格式" title="CoAP标准格式"><br>咸鱼问号.jpg<br>CoAP消息由四部分组成，分别为消息头（必选），Token（可选），Options（可选），Payload（可选）。</p>
+<ul>
+<li>消息头（HEAD）<br>CoAP第一行必为消息头，固定格式，大小为4个byte。分别为<ul>
+<li>Ver ： 2bit，版本信息</li>
+<li>T ： 2bit，消息类型（四种）</li>
+<li>TKL ： 4bit，token长度 当前支持0-8B长度，留有拓展空间</li>
+<li>Code ： 8bit，分为前3bit，代表类型，后5bit，代表空消息或请求码</li>
+<li>Message ID ： 16bit，代表消息MID，每个消息都有独立的ID辨识符，重复发送ID不变</li>
+</ul>
+</li>
+</ul>
 
         
     
@@ -487,19 +541,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/03/11/10年计划/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2019/04/14/像素世界/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
