@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="Blog">
+    <meta name="keywords" content="Blog,IM,MQTT">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -238,11 +238,11 @@
     <meta property="og:title" content="从0开始的IM | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="IM"> <meta property="og:article:tag" content="MQTT"> 
 
     
         <meta property="article:published_time" content="Tue Apr 16 2019 10:00:51 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 16 2019 10:45:59 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 16 2019 13:41:56 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/2019/04/16/从0开始的IM/index.html",
     "headline": "从0开始的IM",
     "datePublished": "Tue Apr 16 2019 10:00:51 GMT+0800",
-    "dateModified": "Tue Apr 16 2019 10:45:59 GMT+0800",
+    "dateModified": "Tue Apr 16 2019 13:41:56 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": "Blog",
+    "keywords": ",IM,MQTTBlog",
     "description": "",
 }
 </script>
@@ -359,17 +359,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnail/article_12_20190416.jpg)">
     
             <p class="article-headline-p">
                 从0开始的IM
@@ -408,6 +399,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/IM/">IM</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/MQTT/">MQTT</a>
+    </li></ul>
     
 
     <!-- Share -->
@@ -612,7 +612,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/技术简析/">技术简析<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作手册/">操作手册<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/涂鸦/">涂鸦<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/读书笔记/">读书笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/超越自我/">超越自我<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/技术简析/">技术简析<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作手册/">操作手册<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/涂鸦/">涂鸦<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/读书笔记/">读书笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/超越自我/">超越自我<span class="sidebar_archives-count">4</span></a>
             </li></ul>
         </li>
         
