@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Apr 15 2019 16:21:39 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 16 2019 14:23:51 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 16 2019 15:28:07 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html",
     "headline": "CoAP与MQTT协议",
     "datePublished": "Mon Apr 15 2019 16:21:39 GMT+0800",
-    "dateModified": "Tue Apr 16 2019 14:23:51 GMT+0800",
+    "dateModified": "Tue Apr 16 2019 15:28:07 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -483,7 +483,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p><em>这是六等星的小宇宙的第 11 篇文章<br>写作时间 : 4小时<br>预计阅读时间 : 10分钟</em></p>
+        <p><em>这是六等星的小宇宙的第 11 篇文章<br>写作时间 : 5小时<br>预计阅读时间 : 10分钟</em></p>
 <h3 id="什么是CoAP与MQTT协议？"><a href="#什么是CoAP与MQTT协议？" class="headerlink" title="什么是CoAP与MQTT协议？"></a>什么是CoAP与MQTT协议？</h3><p>MQTT与CoAP都是为资源受限型的设备而设计的通信协议，在物联网领域有着广泛的应用。  </p>
 <h4 id="什么是CoAP协议？"><a href="#什么是CoAP协议？" class="headerlink" title="什么是CoAP协议？"></a>什么是CoAP协议？</h4><p>Coap（Constrained Application Protocol）是一种应用于物联网领域的类WEB协议，CoAP直译为“受限应用协议”。顾名思义，CoAP协议一般用于资源受限的物联网设备上，在这类设备上的ram，rom通常都非常小，TCP/HTTP对于这类设备就显得过于庞大而不适用。</p>
 <h6 id="CoAP协议特点"><a href="#CoAP协议特点" class="headerlink" title="CoAP协议特点"></a>CoAP协议特点</h6><ul>
@@ -528,7 +528,7 @@
 <li><p>payload（可选）<br>实际携带的数据内容，若有，则需在数据内容前加上标志OxFF</p>
 </li>
 </ul>
-<h6 id="CoAP的安全性"><a href="#CoAP的安全性" class="headerlink" title="CoAP的安全性"></a>CoAP的安全性</h6><p>CoAP的安全性是由DTLS加密实现。DTLS实现需要资源与带宽，在资源非常稀少的终端与有限的带宽下极有可能跑步起来。且DTLS仅适用于单播。</p>
+<h6 id="CoAP的安全性"><a href="#CoAP的安全性" class="headerlink" title="CoAP的安全性"></a>CoAP的安全性</h6><p>CoAP的安全性是由DTLS加密实现。DTLS实现需要资源与带宽，在资源非常稀少的终端与有限的带宽下极有可能跑不起来。且DTLS仅适用于单播。</p>
 <h4 id="什么是MQTT？"><a href="#什么是MQTT？" class="headerlink" title="什么是MQTT？"></a>什么是MQTT？</h4><p>在MQTT官网上是这样说的</p>
 <blockquote>
 <p>MQTT is a machine-to-machine (M2M)/“Internet of Things” connectivity protocol.  </p>
@@ -554,7 +554,7 @@
 <li><strong>三种</strong> 消息发布服务质量<ul>
 <li>至多一次<br>消息发布完全依赖底层TCP/IP。可能发生消息丢失与重复。适用于会频繁重复发送的数据，丢包不影响正常运行的情况。</li>
 <li>至少一次<br>确保消息一定送达。可能发生消息重复。  </li>
-<li>只有一次<br>确保消息送达且只到达一次。只要用于对数据较为严格的系统中，例如计费系统。如消息重复或丢失都会导致较为严重的结果，对消息质量要求极高的请款下选用此消息发布服务质量。</li>
+<li>只有一次<br>确保消息送达且只到达一次。主要用于对数据较为严格的系统中，例如计费系统。如消息重复或丢失都会导致较为严重的结果，对消息质量要求极高的情况下选用此消息发布服务质量。</li>
 </ul>
 </li>
 <li>小型传输，开销极小，协议交换最小化，降低网络传输成本<br>是被用于IoT的核心原因，是在嵌入式设备运算能力与带宽都非常薄弱的情况下最合适的协议之一</li>
@@ -568,7 +568,7 @@
 </ul>
 <p>MQTT传输的消息分别为</p>
 <ul>
-<li>主题（Topic） 可以理解为消息的类型，订阅者订阅（Subscribe）后可以收到对应主题的消息内容（payloaad）</li>
+<li>主题（Topic） 可以理解为消息的类型，订阅者订阅（Subscribe）后可以收到对应主题的消息内容（payload）</li>
 <li>负载（payload） 可以理解为消息内容，指订阅者具体要使用的内容</li>
 </ul>
 <h5 id="网络传输与应用消息"><a href="#网络传输与应用消息" class="headerlink" title="网络传输与应用消息"></a>网络传输与应用消息</h5><p>MQTT会构建底层的网络传输，它将建立客户端与服务端的连接，提供二者之间的一个有序的，无损的，基于字节流的双向传输。<br>即应用数据通过MQTT网络发送时，MQTT会把与之相关的服务质量（QoS）与主题名（Topic）相关联。</p>
@@ -587,7 +587,7 @@
 <li>向订阅的客户端转发应用程序消息</li>
 </ul>
 <h5 id="MQTT协议的订阅、会话、主题"><a href="#MQTT协议的订阅、会话、主题" class="headerlink" title="MQTT协议的订阅、会话、主题"></a>MQTT协议的订阅、会话、主题</h5><ul>
-<li>订阅（Subscription）<br>订阅包含主题筛选器（Topic Filter）和最大服务质量（QoS）。订阅会与一个会话（Session）关联。一个会话可以包含多个订阅。每一个会话中的么个订阅都有一个不同的这题筛选器。</li>
+<li>订阅（Subscription）<br>订阅包含主题筛选器（Topic Filter）和最大服务质量（QoS）。订阅会与一个会话（Session）关联。一个会话可以包含多个订阅。每一个会话中的么个订阅都有一个不同的主题筛选器。</li>
 <li>会话（Session）<br>每个客户端与服务端建立连接后就是一个会话，客户端与服务器之间有状态交互，会话存在于一个网络之间，也可能在客户端与服务器之间跨越多个连续的网络连接。</li>
 <li>主题名（Topic Name）<br>连接到每一个应用程序消息的标签，与服务器订阅相匹配。服务器会将消息发送给订阅所匹配标签的每一个客户端。</li>
 <li>主题筛选器（Topic Filter）<br>一个对主题名通配符筛选器，在订阅表达式中使用，表示订阅所匹配到的多个主题。</li>
@@ -608,7 +608,7 @@
 <li>数据包类型 ： Byte 1 中 bits 7 - 4，相当于一个四位无符号值。</li>
 <li>标识位 ： Byte1 中 bits 3 - 0<br>在不使用标识位的消息类型中，标识位作为保留位。收到无效标志时，接收端必须关闭网络连接。<ul>
 <li>UDP ： 发送消息的副本，用于保证消息的可靠传输，如果设置为1，则下面的变长长度中增加MessageId，并需要回复确认以保证消息传输完成，但不能用于检测消息的重复发送。</li>
-<li>Qos ： 发布消息的服务质量，为最多一次（00），至少一次（01），只有一次（10），预留（11）</li>
+<li>QoS ： 发布消息的服务质量，为最多一次（00），至少一次（01），只有一次（10），预留（11）</li>
 <li>RETAIN ： 发布保留标识，代表服务器保留此次推送消息，若有新订阅者出现，就将消息推送给它，如没有则推送至当前订阅者够释放。</li>
 </ul>
 </li>
@@ -632,8 +632,8 @@
 <li>有多种实现</li>
 </ul>
 <p>再来看二者的差异<br>首先，MQTT与CoAP并没有好与不好的问题，只有适用场景的区别</p>
-<p><strong>MQTT</strong><br>MQTT的特点是可以保持<strong>长连接</strong>，并具备一定的实时性，云端向设备发送消息，设备可以在最短的时间收到并作出响应，所以MQTT更适用于需要实时控制的情况。为了保持长连接，MQTT设备需要不断发送心跳包，功耗就不会低，对功耗有严格要求的情况就不适合MQTT了。   </p>
-<p><strong>CoAP</strong><br>CoAP的特点就是<strong>功耗低</strong>，只用在发送数据时唤醒即可，发送完数据立即休眠。所以CoAP更适合纯粹的传感器设备，尤其是电池供电的传感器设备。<br>同时，CoAP基于UDP协议，对硬件的要求低于MQTT依赖的TCP协议。</p>
+<p><strong>MQTT</strong><br>MQTT的特点是可以保持<strong>长连接</strong>，并具备一定的实时性，云端向设备发送消息，设备可以在最短的时间收到并作出响应，所以MQTT更适用于需要实时控制的情况。为了保持长连接，MQTT设备需要不断发送心跳包，功耗就不会低，对功耗有严格要求的情况就不适合MQTT了。<br>MQTT为物联网提供了许多体贴的设计，例如Qos，“遗言”设计。</p>
+<p><strong>CoAP</strong><br>CoAP的特点就是<strong>功耗低</strong>，只用在发送数据时唤醒即可，发送完数据立即休眠。所以CoAP更适合纯粹的传感器设备，尤其是电池供电的传感器设备。<br>同时，<br>CoAP基于UDP协议，对硬件的要求低于MQTT依赖的TCP协议。<br>做反控设备时，基于TCP的MQTT比基于UDP的CoAP可靠。在使用蜂窝（3G，4G）数据时，CoAP反控极不稳定，甚至无法连通。<br>在保证数据可靠的前提下，MQTT异步Pub/Sub实现优于CoAP必须等待对方应答才能返回的同步模式。</p>
 <table>
 <thead>
 <tr>
