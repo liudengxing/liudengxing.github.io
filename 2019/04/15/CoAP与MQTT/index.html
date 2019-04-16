@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Apr 15 2019 16:21:39 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 16 2019 15:42:36 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 16 2019 17:30:07 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/2019/04/15/CoAP与MQTT/index.html",
     "headline": "CoAP与MQTT协议",
     "datePublished": "Mon Apr 15 2019 16:21:39 GMT+0800",
-    "dateModified": "Tue Apr 16 2019 15:42:36 GMT+0800",
+    "dateModified": "Tue Apr 16 2019 17:30:07 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -632,7 +632,7 @@
 <li>有多种实现</li>
 </ul>
 <p>再来看二者的差异<br>首先，MQTT与CoAP并没有好与不好的问题，只有适用场景的区别</p>
-<p><strong>MQTT</strong><br>MQTT的特点是可以保持<strong>长连接</strong>，并具备一定的实时性，云端向设备发送消息，设备可以在最短的时间收到并作出响应，所以MQTT更适用于需要实时控制的情况。为了保持长连接，MQTT设备需要不断发送心跳包，功耗就不会低，对功耗有严格要求的情况就不适合MQTT了。<br>MQTT为物联网提供了许多体贴的设计，例如Qos，“遗言”设计。</p>
+<p><strong>MQTT</strong><br>MQTT的特点是可以保持<strong>长连接</strong>，并具备一定的实时性，云端向设备发送消息，设备可以在最短的时间收到并作出响应，所以MQTT更适用于需要实时控制的情况。为了保持长连接，MQTT设备需要不断发送心跳包，功耗就不会低，对功耗有严格要求的情况就不适合MQTT了。<br>MQTT为物联网提供了许多体贴的设计，例如QoS，“遗言”设计。</p>
 <p><strong>CoAP</strong><br>CoAP的特点就是<strong>功耗低</strong>，只用在发送数据时唤醒即可，发送完数据立即休眠。所以CoAP更适合纯粹的传感器设备，尤其是电池供电的传感器设备。<br>同时，<br>CoAP基于UDP协议，对硬件的要求低于MQTT依赖的TCP协议。<br>做反控设备时，基于TCP的MQTT比基于UDP的CoAP可靠。在使用蜂窝（3G，4G）数据时，CoAP反控极不稳定，甚至无法连通。<br>在保证数据可靠的前提下，MQTT异步Pub/Sub实现优于CoAP必须等待对方应答才能返回的同步模式。</p>
 <table>
 <thead>
