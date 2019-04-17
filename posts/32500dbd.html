@@ -46,7 +46,7 @@
     
     <title>
         
-            分类: 涂鸦 | 
+            ActiveMQ使用指南 | 
         
         六等星的小宇宙
     </title>
@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="Blog">
+    <meta name="keywords" content="Blog,物联网,MQTT,ActiveMQ">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -218,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="六等星的小宇宙">
-    <meta name="msapplication-starturl" content="http://nightmare233.top/categories/涂鸦/">
+    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/32500dbd.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="六等星的小宇宙">
@@ -233,13 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://nightmare233.top/categories/涂鸦/">
+    <meta property="og:url" content="http://nightmare233.top/posts/32500dbd.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 涂鸦 | 六等星的小宇宙">
+    <meta property="og:title" content="ActiveMQ使用指南 | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="物联网"> <meta property="og:article:tag" content="MQTT"> <meta property="og:article:tag" content="ActiveMQ"> 
 
+    
+        <meta property="article:published_time" content="Wed Apr 17 2019 09:46:18 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 17 2019 11:09:07 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,13 +250,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://nightmare233.top/categories/涂鸦/index.html">
+        <link rel="canonical" href="http://nightmare233.top/posts/32500dbd.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://nightmare233.top/posts/32500dbd.html",
+    "headline": "ActiveMQ使用指南",
+    "datePublished": "Wed Apr 17 2019 09:46:18 GMT+0800",
+    "dateModified": "Wed Apr 17 2019 11:09:07 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "NiGHTMARE",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "六等星的小宇宙",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",物联网,MQTT,ActiveMQBlog",
+    "description": "",
+}
+</script>
 
 
     
@@ -287,96 +320,225 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ActiveMQ使用指南"><span class="post-toc-number">1.</span> <span class="post-toc-text">ActiveMQ使用指南</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是ActiveMQ"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">什么是ActiveMQ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装ActiveMQ"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">安装ActiveMQ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动ActiveMQ"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">启动ActiveMQ</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关闭ActiveMQ"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">关闭ActiveMQ</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="/img/thumbnail/article_10_20190414.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnail/article_11_20190416.jpg)">
+    
+            <p class="article-headline-p">
+                ActiveMQ使用指南
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>NiGHTMARE</strong>
+        <span>4月 17, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/posts/687287dc.html">像素世界</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ActiveMQ/">ActiveMQ</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/MQTT/">MQTT</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/物联网/">物联网</a>
+    </li></ul>
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            像素世界
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/posts/687287dc.html" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="NiGHTMARE's avatar">
-            </div>
-            <div>
-                <strong>NiGHTMARE</strong>
-                <span>4月 14, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/涂鸦/">涂鸦</a>
-              </span>
-            
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
 
-            
+    
 
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ActiveMQ使用指南&url=http://nightmare233.top/posts/32500dbd.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ActiveMQ使用指南&url=http://nightmare233.top/posts/32500dbd.html&via=NiGHTMARE" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/32500dbd.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/32500dbd.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="ActiveMQ使用指南"><a href="#ActiveMQ使用指南" class="headerlink" title="ActiveMQ使用指南"></a>ActiveMQ使用指南</h1><h3 id="什么是ActiveMQ"><a href="#什么是ActiveMQ" class="headerlink" title="什么是ActiveMQ"></a>什么是ActiveMQ</h3><blockquote>
+<p>Apache ActiveMQ™ is the most popular open source, multi-protocol, Java-based messaging server. It supports industry standard protocols so users get the benefits of client choices across a broad range of languages and platforms. Connectivity from C, C++, Python, .Net, and more is available. Integrate your multi-platform applications using the ubiquitous AMQP protocol. Exchange messages between your web applications using STOMP over websockets. Manage your IoT devices using MQTT. Support your existing JMS infrastructure and beyond. ActiveMQ offers the power and flexibility to support any messaging use-case.</p>
+</blockquote>
+<p>“Apache ActiveMQ”是最受欢迎的开源、多协议、依赖于java的信息服务器。ActiveMQ提供行业标准协议以便用户可以在大范围的语言与平台上使用，包括 C, C++, Python, .Net等。你可以使用无处不在的AMQP协议来整合你的多平台应用；使用依赖于websockets的STOMP协议来交换你的web应用间的数据；使用MQTT管理你的IoT设备。ActiveMQ还支持你现有的JMS架构以及更多的架构。总而言之，ActiveMQ提供有力又不失灵活的信息服务支持。  </p>
+<h3 id="安装ActiveMQ"><a href="#安装ActiveMQ" class="headerlink" title="安装ActiveMQ"></a>安装ActiveMQ</h3><p>我使用的环境是Windows10，这里就以win10来进行说明   </p>
+<p>首先前往<a href="https://activemq.apache.org/index.html" target="_blank" rel="noopener">ActiveMQ官网</a>进行下载  </p>
+<p>官网提供两个版本，分别为”Classic”与“Artemis”<br>“Classic”可以看做是“稳定版”，“Artemis”则是“开发版”。Classic最新版本号为5，而Artemis迭代足够多的特性后就会转为Classic 6，本篇就以Classic 5 作为演示版本。<br>我使用的具体版本为apache-activemq-5.15.9</p>
+<h3 id="启动ActiveMQ"><a href="#启动ActiveMQ" class="headerlink" title="启动ActiveMQ"></a>启动ActiveMQ</h3><p>在路径apache-activemq-5.15.9/bin下可以看到win32与win64两个文件夹，分别对应32位与64位系统<br>图<br>我使用得是64位的win10，就打开win64，找到activemq.bat，这就是ActiveMQ的启动脚本<br>图<br>运行成功后，AcitveMQ默认端口为8161，我们访问<a href="http://localhost:8161/admin" target="_blank" rel="noopener">http://localhost:8161/admin</a> 来访问ActiveMQ控制台。此时网页要求输入账号和密码，默认账号密码都是admin，可以在apache-activemq-5.15.9/conf下的users.properties自行配置。<br>此时我们就可以看见ActiveMQ的控制台了。</p>
+<h3 id="关闭ActiveMQ"><a href="#关闭ActiveMQ" class="headerlink" title="关闭ActiveMQ"></a>关闭ActiveMQ</h3><p>在Windows下关闭命令行即可。</p>
+
         
     
 
     
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/posts/4839de24.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/posts/667b7a15.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     

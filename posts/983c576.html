@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            CoAP与MQTT协议 | 
+        
+        六等星的小宇宙
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="Blog,物联网">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="六等星的小宇宙">
+    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/983c576.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="六等星的小宇宙">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://nightmare233.top/posts/983c576.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="CoAP与MQTT协议 | 六等星的小宇宙">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="物联网"> 
+
+    
+        <meta property="article:published_time" content="Mon Apr 15 2019 16:21:39 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 17 2019 11:13:28 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://nightmare233.top/posts/983c576.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://nightmare233.top/posts/983c576.html",
+    "headline": "CoAP与MQTT协议",
+    "datePublished": "Mon Apr 15 2019 16:21:39 GMT+0800",
+    "dateModified": "Wed Apr 17 2019 11:13:28 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "NiGHTMARE",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "六等星的小宇宙",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",物联网Blog",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是CoAP与MQTT协议？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是CoAP与MQTT协议？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#什么是CoAP协议？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是CoAP协议？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#CoAP协议特点"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">CoAP协议特点</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#CoAP协议的四种消息类型"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">CoAP协议的四种消息类型</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#CoAP的标准格式"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">CoAP的标准格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#CoAP的安全性"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">CoAP的安全性</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#什么是MQTT？"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">什么是MQTT？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT设计规范"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">MQTT设计规范</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT主要特性"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">MQTT主要特性</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT协议原理"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">MQTT协议原理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#MQTT协议实现方式"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">MQTT协议实现方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#网络传输与应用消息"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">网络传输与应用消息</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT客户端"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">MQTT客户端</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT服务器"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">MQTT服务器</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT协议的订阅、会话、主题"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">MQTT协议的订阅、会话、主题</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT协议中的方法"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">MQTT协议中的方法</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#MQTT协议数据包标准结构"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">MQTT协议数据包标准结构</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#MQTT与CoAP的异同？"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">MQTT与CoAP的异同？</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/thumbnail/article_11_20190416.jpg)">
+    
+            <p class="article-headline-p">
+                CoAP与MQTT协议
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>NiGHTMARE</strong>
+        <span>4月 15, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/物联网/">物联网</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CoAP与MQTT协议&url=http://nightmare233.top/posts/983c576.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CoAP与MQTT协议&url=http://nightmare233.top/posts/983c576.html&via=NiGHTMARE" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/983c576.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/983c576.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><em>这是六等星的小宇宙的第 11 篇文章<br>写作时间 : 6小时<br>预计阅读时间 : 11分钟</em></p>
+<h3 id="什么是CoAP与MQTT协议？"><a href="#什么是CoAP与MQTT协议？" class="headerlink" title="什么是CoAP与MQTT协议？"></a>什么是CoAP与MQTT协议？</h3><p>MQTT与CoAP都是为资源受限型的设备而设计的通信协议，在物联网领域有着广泛的应用。  </p>
+<h4 id="什么是CoAP协议？"><a href="#什么是CoAP协议？" class="headerlink" title="什么是CoAP协议？"></a>什么是CoAP协议？</h4><p>CoAP（Constrained Application Protocol）是一种应用于物联网领域的类WEB协议，CoAP直译为“受限应用协议”。顾名思义，CoAP协议一般用于资源受限的物联网设备上，在这类设备上的ram，rom通常都非常小，TCP/HTTP对于这类设备就显得过于庞大而不适用。</p>
+<h6 id="CoAP协议特点"><a href="#CoAP协议特点" class="headerlink" title="CoAP协议特点"></a>CoAP协议特点</h6><ul>
+<li>CoAP协议的网络传输层由TCP改为UDP</li>
+<li>CoAP基于REST</li>
+<li>格式是二进制格式</li>
+<li>协议轻量化，最小长度仅为4b，仅为HTTP头文件大小的十分之一左右</li>
+<li>支持可靠传输，数据重传，块传输</li>
+<li>支持IP多播</li>
+<li>非长连接通信，适用于低功耗物联网场景</li>
+</ul>
+<h6 id="CoAP协议的四种消息类型"><a href="#CoAP协议的四种消息类型" class="headerlink" title="CoAP协议的四种消息类型"></a>CoAP协议的四种消息类型</h6><ul>
+<li>CON<br>需要被确认的请求。如CON请求被发送，则接收方必须做出响应。CoAP以此实现<strong>可靠</strong>响应。</li>
+<li>NON<br>不需要被确认的请求。如NON请求被发送，接收方不必对请求作出响应。适用于消息会频繁重复被发送且丢包不影响正常操作的情况。在NON基础上的请求服务为<strong>不可靠</strong>消息传输。</li>
+<li>ACK<br>ACK为对于CON所做出的消息应答</li>
+<li>RST<br>RST为复位消息，在<strong>可靠传输</strong>时接收到无法解析的消息或错误时，必须回应RST消息。</li>
+</ul>
+<h5 id="CoAP的标准格式"><a href="#CoAP的标准格式" class="headerlink" title="CoAP的标准格式"></a>CoAP的标准格式</h5><p><img src="/img/Article/CoAP标准格式.jpg" alt="CoAP标准格式" title="CoAP标准格式">  </p>
+<p>CoAP消息由四部分组成，分别为消息头（必选），Token（可选），Options（可选），Payload（可选）。</p>
+<ul>
+<li><p>消息头（HEAD）<br>CoAP第一行必为消息头，固定格式，大小为4个byte。分别为</p>
+<ul>
+<li>Ver ： 2bit，版本信息</li>
+<li>T ： 2bit，消息类型（四种）</li>
+<li>TKL ： 4bit，token长度 当前支持0-8B长度，留有拓展空间</li>
+<li>Code ： 8bit，分为前3bit，代表类型，后5bit，代表空消息或请求码</li>
+<li>Message ID ： 16bit，代表消息MID，每个消息都有独立的ID辨识符，重复发送ID不变</li>
+</ul>
+</li>
+<li><p>CoAP请求码（requests）与响应码（responses）  </p>
+<ul>
+<li>01 GET——用于获取资源</li>
+<li>02 POST——用于创建资源</li>
+<li>03 PUT——用于更新资源</li>
+<li>04 DELETE——用于删除资源</li>
+</ul>
+</li>
+<li><p>token（可选）<br>请求ID。用于异步通讯时匹配回应对象。在服务器无法实时响应客户端请求时，客户端就需要根据服务器发送消息的token来确定服务器消息时针对那个请求的。</p>
+</li>
+<li><p>option（可选，0个或多个）<br>用于描述请求或响应对应的各个属性，类似于参数或特征描述。</p>
+</li>
+<li><p>payload（可选）<br>实际携带的数据内容，若有，则需在数据内容前加上标志OxFF</p>
+</li>
+</ul>
+<h6 id="CoAP的安全性"><a href="#CoAP的安全性" class="headerlink" title="CoAP的安全性"></a>CoAP的安全性</h6><p>CoAP的安全性是由DTLS加密实现。DTLS实现需要资源与带宽，在资源非常稀少的终端与有限的带宽下极有可能跑不起来。且DTLS仅适用于单播。</p>
+<h4 id="什么是MQTT？"><a href="#什么是MQTT？" class="headerlink" title="什么是MQTT？"></a>什么是MQTT？</h4><p>在MQTT官网上是这样说的</p>
+<blockquote>
+<p>MQTT is a machine-to-machine (M2M)/“Internet of Things” connectivity protocol.  </p>
+</blockquote>
+<p>“MQTT是一个 设备与设备（M2M）/ 物联网 之间的通信协议 ”  </p>
+<p>参考链接<br><a href="http://mqtt.org/" target="_blank" rel="noopener">MQTT官方文档</a><br><a href="https://legacy.gitbook.com/book/mcxiaoke/mqtt-cn" target="_blank" rel="noopener">MQTT中文文档</a></p>
+<h5 id="MQTT设计规范"><a href="#MQTT设计规范" class="headerlink" title="MQTT设计规范"></a>MQTT设计规范</h5><p>因为物联网环境相对特殊，所以MQTT遵循以下设计原则 ：</p>
+<ul>
+<li>精简，不添加可有可无的功能</li>
+<li>发布/订阅（Pub/Sub）模式，方便消息在传感器间传递</li>
+<li>允许用户动态创建主题，零运维成本</li>
+<li>最小化的传输量带来最大化的传输速率</li>
+<li>考虑最坏情况（低带宽，高延迟，不稳定）</li>
+<li>支持连续会话控制</li>
+<li>理解客户端计算力可能很低</li>
+<li>提供服务质量管理</li>
+<li>假设数据不可知，不强求传输数据的类型与格式，保证灵活性</li>
+</ul>
+<h5 id="MQTT主要特性"><a href="#MQTT主要特性" class="headerlink" title="MQTT主要特性"></a>MQTT主要特性</h5><ul>
+<li>使用<strong>发布/订阅</strong>消息模式，提供一对多消息发布，解除应用程序耦合</li>
+<li>对负载内容屏蔽的消息传输</li>
+<li>使用TCP/IP提供网络连接（提供MQTT-SN实现基于UDP的网络连接）</li>
+<li><strong>三种</strong> 消息发布服务质量<ul>
+<li>至多一次<br>消息发布完全依赖底层TCP/IP。可能发生消息丢失与重复。适用于会频繁重复发送的数据，丢包不影响正常运行的情况。</li>
+<li>至少一次<br>确保消息一定送达。可能发生消息重复。  </li>
+<li>只有一次<br>确保消息送达且只到达一次。主要用于对数据较为严格的系统中，例如计费系统。如消息重复或丢失都会导致较为严重的结果，对消息质量要求极高的情况下选用此消息发布服务质量。</li>
+</ul>
+</li>
+<li>小型传输，开销极小，协议交换最小化，降低网络传输成本<br>是被用于IoT的核心原因，是在嵌入式设备运算能力与带宽都非常薄弱的情况下最合适的协议之一</li>
+<li>Last Will与Testament特性<br>Last Will : 遗言机制，用于通知同一主题下的其他设备发送遗言的设备已断开连接<br>Testament ： 遗嘱机制，类似于Last Will</li>
+</ul>
+<h5 id="MQTT协议原理"><a href="#MQTT协议原理" class="headerlink" title="MQTT协议原理"></a>MQTT协议原理</h5><h6 id="MQTT协议实现方式"><a href="#MQTT协议实现方式" class="headerlink" title="MQTT协议实现方式"></a>MQTT协议实现方式</h6><p>实现MQTT协议需要客户端与服务端通讯完成。通讯过程中，MQTT协议有三种身份：</p>
+<ul>
+<li>发布者（Publish）</li>
+<li>代理（Broker）（服务器）</li>
+<li>订阅者（SubScribe）<br>其中，消息的发布者与订阅者都是客户端，消息代理是服务器，消息发布者可以同时是订阅者。</li>
+</ul>
+<p>MQTT传输的消息分别为</p>
+<ul>
+<li>主题（Topic） 可以理解为消息的类型，订阅者订阅（Subscribe）后可以收到对应主题的消息内容（payload）</li>
+<li>负载（payload） 可以理解为消息内容，指订阅者具体要使用的内容</li>
+</ul>
+<h5 id="网络传输与应用消息"><a href="#网络传输与应用消息" class="headerlink" title="网络传输与应用消息"></a>网络传输与应用消息</h5><p>MQTT会构建底层的网络传输，它将建立客户端与服务端的连接，提供二者之间的一个有序的，无损的，基于字节流的双向传输。<br>即应用数据通过MQTT网络发送时，MQTT会把与之相关的服务质量（QoS）与主题名（Topic）相关联。</p>
+<h5 id="MQTT客户端"><a href="#MQTT客户端" class="headerlink" title="MQTT客户端"></a>MQTT客户端</h5><p>一个使用MQTT协议的应用或设备，总是建立到服务器的网络连接，服务端可以：</p>
+<ul>
+<li>发布其他客户端可能会订阅的消息</li>
+<li>订阅其他客户的发布的消息</li>
+<li>退订或删除应用程序的消息</li>
+<li>断开与服务器连接</li>
+</ul>
+<h5 id="MQTT服务器"><a href="#MQTT服务器" class="headerlink" title="MQTT服务器"></a>MQTT服务器</h5><p>MQTT服务器被称为“消息代理”（Broker），可以使一个应用程序或一台设备，位于消息发布者与订阅者之间，服务器可以：</p>
+<ul>
+<li>接受来自客户端的网络连接</li>
+<li>接受客户发布的应用信息</li>
+<li>处理来自客户端的订阅与退订请求</li>
+<li>向订阅的客户端转发应用程序消息</li>
+</ul>
+<h5 id="MQTT协议的订阅、会话、主题"><a href="#MQTT协议的订阅、会话、主题" class="headerlink" title="MQTT协议的订阅、会话、主题"></a>MQTT协议的订阅、会话、主题</h5><ul>
+<li>订阅（Subscription）<br>订阅包含主题筛选器（Topic Filter）和最大服务质量（QoS）。订阅会与一个会话（Session）关联。一个会话可以包含多个订阅。每一个会话中的么个订阅都有一个不同的主题筛选器。</li>
+<li>会话（Session）<br>每个客户端与服务端建立连接后就是一个会话，客户端与服务器之间有状态交互，会话存在于一个网络之间，也可能在客户端与服务器之间跨越多个连续的网络连接。</li>
+<li>主题名（Topic Name）<br>连接到每一个应用程序消息的标签，与服务器订阅相匹配。服务器会将消息发送给订阅所匹配标签的每一个客户端。</li>
+<li>主题筛选器（Topic Filter）<br>一个对主题名通配符筛选器，在订阅表达式中使用，表示订阅所匹配到的多个主题。</li>
+<li>负载（Payload）<br>消息订阅者所接收的具体内容</li>
+</ul>
+<h5 id="MQTT协议中的方法"><a href="#MQTT协议中的方法" class="headerlink" title="MQTT协议中的方法"></a>MQTT协议中的方法</h5><p>MQTT在协议中定义了一些方法，用来表示对确定资源所进行的操作。这个资源可以代表与现存在的数据或动态生成数据，主要取决于服务器的实现。通常来说，资源指服务器上的文件或输出。主要方法有：  </p>
+<ul>
+<li>Connect 等待与服务器建立连接</li>
+<li>Disconnect 等待MQTT客户端完成所做的工作，并与服务器断开TCP/IP会话</li>
+<li>Subscribe 等待完成订阅</li>
+<li>UnSubscribe 等待服务器取消客户端的一个或多个topics订阅</li>
+<li>Publish MQTT客户端发送消息请求，发送完成后返回应用线程</li>
+</ul>
+<h5 id="MQTT协议数据包标准结构"><a href="#MQTT协议数据包标准结构" class="headerlink" title="MQTT协议数据包标准结构"></a>MQTT协议数据包标准结构</h5><p>一个MQTT数据包由三部分组成，分别为固定头（Fixed header）、可变头（Variable header）、消息体（payload）。</p>
+<ul>
+<li><p>固定头（必选）<br>存在于所有MQTT数据表中，表示数据包类型以及数据表分组标识。结构如下</p>
+<ul>
+<li>数据包类型 ： Byte 1 中 bits 7 - 4，相当于一个四位无符号值。</li>
+<li>标识位 ： Byte1 中 bits 3 - 0<br>在不使用标识位的消息类型中，标识位作为保留位。收到无效标志时，接收端必须关闭网络连接。<ul>
+<li>UDP ： 发送消息的副本，用于保证消息的可靠传输，如果设置为1，则下面的变长长度中增加MessageId，并需要回复确认以保证消息传输完成，但不能用于检测消息的重复发送。</li>
+<li>QoS ： 发布消息的服务质量，为最多一次（00），至少一次（01），只有一次（10），预留（11）</li>
+<li>RETAIN ： 发布保留标识，代表服务器保留此次推送消息，若有新订阅者出现，就将消息推送给它，如没有则推送至当前订阅者够释放。</li>
+</ul>
+</li>
+<li>剩余长度  Byte2<br>固定头的第二字节用于保存变长头部与消息体总大小，为可拓展机制，前7位用于保存长度，后部用于标识，若最后一位为1，表示长度不足，需使用第二字节继续保存。</li>
+</ul>
+</li>
+<li><p>可变头（可选）<br>可选项，由数据包类型决定可变头是否存在与其具体消息内容，位于固定头与负载之间，常用于包的标识符<br>包PUBLISH (QoS &gt; 0)、PUBACK、PUBREC、PUBREL、PUBCOMP、SUBSCRIBE、SUBACK、UNSUBSCRIBE、UNSUBACK都包含有2字节的数据包标识字段</p>
+</li>
+<li><p>消息体（可选）<br>客户端收到的具体内容，包含CONNECT、SUBSCRIBE、SUBACK、UNSUBSCRIBE四种类型的消息。</p>
+</li>
+<li>CONNECT，消息体内容主要是：客户端的ClientID、订阅的Topic、Message以及用户名和密码</li>
+<li>SUBSCRIBE，消息体内容是一系列的要订阅的主题以及QoS</li>
+<li>SUBACK，消息体内容是服务器对于SUBSCRIBE所申请的主题及QoS进行确认和回复</li>
+<li>UNSUBSCRIBE，消息体内容是要订阅的主题</li>
+</ul>
+<h4 id="MQTT与CoAP的异同？"><a href="#MQTT与CoAP的异同？" class="headerlink" title="MQTT与CoAP的异同？"></a>MQTT与CoAP的异同？</h4><p>MQTT与CoAP均为Iot的常用协议，因为二者</p>
+<ul>
+<li>开放标准</li>
+<li>适用于受限环境（相比于HTTP）</li>
+<li>支持异步传输</li>
+<li>有多种实现</li>
+</ul>
+<p>再来看二者的差异<br>首先，MQTT与CoAP并没有好与不好的问题，只有适用场景的区别</p>
+<p><strong>MQTT</strong><br>MQTT的特点是可以保持<strong>长连接</strong>，并具备一定的实时性，云端向设备发送消息，设备可以在最短的时间收到并作出响应，所以MQTT更适用于需要实时控制的情况。为了保持长连接，MQTT设备需要不断发送心跳包，功耗就不会低，对功耗有严格要求的情况就不适合MQTT了。<br>MQTT为物联网提供了许多体贴的设计，例如QoS，“遗言”设计。</p>
+<p><strong>CoAP</strong><br>CoAP的特点就是<strong>功耗低</strong>，只用在发送数据时唤醒即可，发送完数据立即休眠。所以CoAP更适合纯粹的传感器设备，尤其是电池供电的传感器设备。<br>同时，<br>CoAP基于UDP协议，对硬件的要求低于MQTT依赖的TCP协议。<br>做反控设备时，基于TCP的MQTT比基于UDP的CoAP可靠。在使用蜂窝（3G，4G）数据时，CoAP反控极不稳定，甚至无法连通。<br>在保证数据可靠的前提下，MQTT异步Pub/Sub实现优于CoAP必须等待对方应答才能返回的同步模式。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">协议</th>
+<th style="text-align:center">核心特点</th>
+<th style="text-align:center">下层协议</th>
+<th style="text-align:center">适用场合</th>
+<th style="text-align:center">硬件要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">MQTT</td>
+<td style="text-align:center">长连接</td>
+<td style="text-align:center">TCP</td>
+<td style="text-align:center">实时控制/执行器</td>
+<td style="text-align:center">较高</td>
+</tr>
+<tr>
+<td style="text-align:center">CoAP</td>
+<td style="text-align:center">功耗低</td>
+<td style="text-align:center">UDP</td>
+<td style="text-align:center">数据采集/传感器</td>
+<td style="text-align:center">较低</td>
+</tr>
+</tbody>
+</table>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/posts/667b7a15.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/posts/687287dc.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="NiGHTMARE's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        rsbgbn@126.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">3</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/技术简析/">技术简析<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/操作手册/">操作手册<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/涂鸦/">涂鸦<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/读书笔记/">读书笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/超越自我/">超越自我<span class="sidebar_archives-count">4</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/liudengxing" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/NiGHTMARESE" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/2837654" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;六等星的小宇宙
+            
+                <br>
+                
+                    NiGHTMARE
+                
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2019;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
