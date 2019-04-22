@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="Blog,MQTT,ActiveMQ,物联网">
+    <meta name="keywords" content="Blog,物联网,MQTT,ActiveMQ">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -238,11 +238,11 @@
     <meta property="og:title" content="ActiveMQ使用指南 | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="MQTT"> <meta property="og:article:tag" content="ActiveMQ"> <meta property="og:article:tag" content="物联网"> 
+    <meta property="og:article:tag" content="物联网"> <meta property="og:article:tag" content="MQTT"> <meta property="og:article:tag" content="ActiveMQ"> 
 
     
         <meta property="article:published_time" content="Wed Apr 17 2019 09:46:18 GMT+0800">
-        <meta property="article:modified_time" content="Sun Apr 21 2019 18:43:20 GMT+0800">
+        <meta property="article:modified_time" content="Mon Apr 22 2019 16:14:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/posts/32500dbd.html",
     "headline": "ActiveMQ使用指南",
     "datePublished": "Wed Apr 17 2019 09:46:18 GMT+0800",
-    "dateModified": "Sun Apr 21 2019 18:43:20 GMT+0800",
+    "dateModified": "Mon Apr 22 2019 16:14:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",MQTT,ActiveMQ,物联网Blog",
+    "keywords": ",物联网,MQTT,ActiveMQBlog",
     "description": "",
 }
 </script>
@@ -516,9 +516,9 @@
 <h3 id="安装ActiveMQ"><a href="#安装ActiveMQ" class="headerlink" title="安装ActiveMQ"></a>安装ActiveMQ</h3><p>我使用的环境是Windows10，这里就以win10来进行说明   </p>
 <p>首先前往<a href="https://activemq.apache.org/index.html" target="_blank" rel="noopener">ActiveMQ官网</a>进行下载  </p>
 <p>官网提供两个版本，分别为”Classic”与“Artemis”<br>“Classic”可以看做是“稳定版”，“Artemis”则是“开发版”。Classic最新版本号为5，而Artemis迭代足够多的特性后就会转为Classic 6，本篇就以Classic 5 作为演示版本。<br>我使用的具体版本为apache-activemq-5.15.9</p>
-<h3 id="启动ActiveMQ"><a href="#启动ActiveMQ" class="headerlink" title="启动ActiveMQ"></a>启动ActiveMQ</h3><p>在路径apache-activemq-5.15.9/bin下可以看到win32与win64两个文件夹，分别对应32位与64位系统<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxfVT.png" alt="ActiveMQ运行目录"><br>我使用得是64位的win10，就打开win64，找到activemq.bat，这就是ActiveMQ的启动脚本<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxYog.png" alt="Active启动目录"><br>双击运行<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxVPc.png" alt="ActiveMQ启动"><br>运行成功后，AcitveMQ默认端口为8161，我们访问<a href="http://localhost:8161/admin" target="_blank" rel="noopener">http://localhost:8161/admin</a> 来访问ActiveMQ控制台。此时网页要求输入账号和密码，默认账号密码都是admin，可以在apache-activemq-5.15.9/conf下的users.properties自行配置。<br>此时我们就可以看见ActiveMQ的控制台了。<br>1<a href="https://piccdn.freejishu.com/images/2019/04/21/PnxhyI.png" target="_blank" rel="noopener">ActiveMQ控制台</a></p>
+<h3 id="启动ActiveMQ"><a href="#启动ActiveMQ" class="headerlink" title="启动ActiveMQ"></a>启动ActiveMQ</h3><p>在路径apache-activemq-5.15.9/bin下可以看到win32与win64两个文件夹，分别对应32位与64位系统<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxfVT.png" alt="ActiveMQ运行目录"><br>我使用得是64位的win10，就打开win64，找到activemq.bat，这就是ActiveMQ的启动脚本<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxYog.png" alt="Active启动目录"><br>双击运行<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxVPc.png" alt="ActiveMQ启动"><br>运行成功后，AcitveMQ默认端口为8161，我们访问<a href="http://localhost:8161/admin" target="_blank" rel="noopener">http://localhost:8161/admin</a> 来访问ActiveMQ控制台。此时网页要求输入账号和密码，默认账号密码都是admin，可以在apache-activemq-5.15.9/conf下的users.properties自行配置。<br>此时我们就可以看见ActiveMQ的控制台了。<br><img src="https://piccdn.freejishu.com/images/2019/04/21/PnxhyI.png" alt="ActiveMQ控制台"></p>
 <h3 id="关闭ActiveMQ"><a href="#关闭ActiveMQ" class="headerlink" title="关闭ActiveMQ"></a>关闭ActiveMQ</h3><p>在Windows下关闭命令行窗口即可。  </p>
-<p>下一篇<br><a href="https://nightmare233.top/posts/4839de24.html">ActiveMQ的简单使用</a></p>
+<p>参考阅读<br><a href="https://nightmare233.top/posts/4839de24.html">ActiveMQ的简单使用</a></p>
 
         
     
