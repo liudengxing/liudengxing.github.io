@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Mon Apr 22 2019 14:32:22 GMT+0800">
-        <meta property="article:modified_time" content="Mon Apr 22 2019 14:56:00 GMT+0800">
+        <meta property="article:modified_time" content="Mon Apr 22 2019 15:05:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/posts/cab443d3.html",
     "headline": "CoAP的简单使用",
     "datePublished": "Mon Apr 22 2019 14:32:22 GMT+0800",
-    "dateModified": "Mon Apr 22 2019 14:56:00 GMT+0800",
+    "dateModified": "Mon Apr 22 2019 15:05:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -476,50 +476,83 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p><em>这是六等星的小宇宙的第 16 篇文章<br>写作时间 :  15分钟<br>总字数 :  2816字<br>预计阅读时间 :  3分钟</em></p>
-<p>在<a href="https://nightmare233.top/posts/983c576.html">前面的文章</a>中，我简单介绍了CoAP协议的大概情况,今天我们就来看看CoAP的具体使用。<br>我们首先在IDEA中新建一个Maven项目，然后根据官方GitHub仓库<a href="https://github.com/eclipse/californium" target="_blank" rel="noopener">californium</a>说明文档进行maven的配置，具体配置如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">  &lt;dependencies&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.eclipse.californium&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;californium-core&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;1.0.7&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.eclipse.californium&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;element-connector&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;1.0.7&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">      &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;org.eclipse.californium&lt;/groupId&gt;</span><br><span class="line">          &lt;artifactId&gt;scandium&lt;/artifactId&gt;</span><br><span class="line">          &lt;version&gt;1.0.7&lt;/version&gt;</span><br><span class="line">      &lt;/dependency&gt;</span><br><span class="line">  &lt;/dependencies&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">之后，我们新建一个CoAP服务端</span><br></pre></td></tr></table></figure></p>
-<p>import org.eclipse.californium.core.CoapResource;<br>import org.eclipse.californium.core.CoapServer;<br>import org.eclipse.californium.core.coap.CoAP;<br>import org.eclipse.californium.core.server.resources.CoapExchange;</p>
-<p>import java.text.SimpleDateFormat;<br>import java.util.Date;</p>
-<p>public class CoAPServer {<br>    public static void main(String[] args){<br>        //创建CoAP服务器<br>        CoapServer server = new CoapServer();</p>
-<pre><code>    server.add(new CoapResource(&quot;hello&quot;){
+<p>在<a href="https://nightmare233.top/posts/983c576.html">前面的文章</a>中，我简单介绍了CoAP协议的大概情况,今天我们就来看看CoAP的具体使用。<br>我们首先在IDEA中新建一个Maven项目，然后根据官方GitHub仓库<a href="https://github.com/eclipse/californium" target="_blank" rel="noopener">californium</a>说明文档进行maven的配置，具体配置如下:  </p>
+<pre><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.eclipse.californium&lt;/groupId&gt;
+        &lt;artifactId&gt;californium-core&lt;/artifactId&gt;
+        &lt;version&gt;1.0.7&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.eclipse.californium&lt;/groupId&gt;
+        &lt;artifactId&gt;element-connector&lt;/artifactId&gt;
+        &lt;version&gt;1.0.7&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.eclipse.californium&lt;/groupId&gt;
+        &lt;artifactId&gt;scandium&lt;/artifactId&gt;
+        &lt;version&gt;1.0.7&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre><p>之后，我们新建一个CoAP服务端  </p>
+<pre><code>import org.eclipse.californium.core.CoapResource;
+import org.eclipse.californium.core.CoapServer;
+import org.eclipse.californium.core.coap.CoAP;
+import org.eclipse.californium.core.server.resources.CoapExchange;
 
-        @Override
-        public void handleGET(CoapExchange exchange) {
-            exchange.respond(CoAP.ResponseCode.CONTENT,&quot;Hello&quot;);
-        }
-    });
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-    server.add(new CoapResource(&quot;time&quot;){
-        @Override
-        public void handleGET(CoapExchange exchange) {
-            Date date = new Date();
-            exchange.respond(CoAP.ResponseCode.CONTENT,new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(date));
-        }
-    });
+public class CoAPServer {
+    public static void main(String[] args){
+        //创建CoAP服务器
+        CoapServer server = new CoapServer();
 
-    //启动服务器
-    server.start();
-}
-</code></pre><p>}</p>
-<pre><code>再新建一个客户端
-</code></pre><p>import org.eclipse.californium.core.*;<br>import java.net.URI;<br>import java.net.URISyntaxException;</p>
-<p>public class CoAPClient {</p>
-<pre><code>public static void main(String[] args) throws URISyntaxException{
-    URI uri = null;
-    //设定请求路径
-    uri = new URI(&quot;localhost:5683/hello&quot;);
-    //创建客户端
-    CoapClient client = new CoapClient(uri);
-    //发起一个GET请求
-    CoapResponse response = client.get();
-    if(response != null){
-        System.out.println(response.getCode());
-        System.out.println(response.getOptions());
-        System.out.println(response.getResponseText());
-        System.out.println(&quot;\nAdvanced\n&quot;);
-        System.out.println(Utils.prettyPrint(response));
+        server.add(new CoapResource(&quot;hello&quot;){
+
+            @Override
+            public void handleGET(CoapExchange exchange) {
+                exchange.respond(CoAP.ResponseCode.CONTENT,&quot;Hello&quot;);
+            }
+        });
+
+        server.add(new CoapResource(&quot;time&quot;){
+            @Override
+            public void handleGET(CoapExchange exchange) {
+                Date date = new Date();
+                exchange.respond(CoAP.ResponseCode.CONTENT,new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;).format(date));
+            }
+        });
+
+        //启动服务器
+        server.start();
     }
 }
-</code></pre><p>}<br><code>`</code><br>项目的主体框架就搭好了，我们首先运行服务端CoAPServer.main，控制台输出如下:<br><img src="https://piccdn.freejishu.com/images/2019/04/22/PnxZTu.png" alt="CoAP服务端控制台输出"><br>这时我们再运行客户端CoAPClient.main，控制台输出如下:<br><img src="https://piccdn.freejishu.com/images/2019/04/22/PnxUGa.png" alt="CoAP客户端控制台输出"><br>可以看到，消息已成功传递。</p>
+</code></pre><p>再新建一个客户端</p>
+<pre><code>import org.eclipse.californium.core.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public class CoAPClient {
+
+    public static void main(String[] args) throws URISyntaxException{
+        URI uri = null;
+        //设定请求路径
+        uri = new URI(&quot;localhost:5683/hello&quot;);
+        //创建客户端
+        CoapClient client = new CoapClient(uri);
+        //发起一个GET请求
+        CoapResponse response = client.get();
+        if(response != null){
+            System.out.println(response.getCode());
+            System.out.println(response.getOptions());
+            System.out.println(response.getResponseText());
+            System.out.println(&quot;\nAdvanced\n&quot;);
+            System.out.println(Utils.prettyPrint(response));
+        }
+    }
+}
+</code></pre><p>项目的主体框架就搭好了，我们首先运行服务端CoAPServer.main，控制台输出如下:<br><img src="https://piccdn.freejishu.com/images/2019/04/22/PnxZTu.png" alt="CoAP服务端控制台输出"><br>这时我们再运行客户端CoAPClient.main，控制台输出如下:<br><img src="https://piccdn.freejishu.com/images/2019/04/22/PnxUGa.png" alt="CoAP客户端控制台输出"><br>可以看到，消息已成功传递。</p>
 
         
     
