@@ -46,7 +46,7 @@
     
     <title>
         
-            在CentOS7上安装Docker | 
+            KVM 管理工具之 WebVirtCloud 安装 | 
         
         六等星的小宇宙
     </title>
@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="Blog,Docker">
+    <meta name="keywords" content="Blog">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -218,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="六等星的小宇宙">
-    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/272161d4.html">
+    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/faae2995.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="六等星的小宇宙">
@@ -233,16 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://nightmare233.top/posts/272161d4.html">
+    <meta property="og:url" content="http://nightmare233.top/posts/faae2995.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="在CentOS7上安装Docker | 六等星的小宇宙">
+    <meta property="og:title" content="KVM 管理工具之 WebVirtCloud 安装 | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="Docker"> 
+    
 
     
-        <meta property="article:published_time" content="Wed May 22 2019 11:33:05 GMT+0800">
-        <meta property="article:modified_time" content="Wed May 22 2019 11:40:42 GMT+0800">
+        <meta property="article:published_time" content="Tue Jul 30 2019 14:02:11 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jul 30 2019 14:59:12 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://nightmare233.top/posts/272161d4.html">
+        <link rel="canonical" href="http://nightmare233.top/posts/faae2995.html">
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://nightmare233.top/posts/272161d4.html",
-    "headline": "在CentOS7上安装Docker",
-    "datePublished": "Wed May 22 2019 11:33:05 GMT+0800",
-    "dateModified": "Wed May 22 2019 11:40:42 GMT+0800",
+    "mainEntityOfPage": "http://nightmare233.top/posts/faae2995.html",
+    "headline": "KVM 管理工具之 WebVirtCloud 安装",
+    "datePublished": "Tue Jul 30 2019 14:02:11 GMT+0800",
+    "dateModified": "Tue Jul 30 2019 14:59:12 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",DockerBlog",
+    "keywords": "Blog",
     "description": "",
 }
 </script>
@@ -348,7 +348,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在CentOS7上安装Docker"><span class="post-toc-number">1.</span> <span class="post-toc-text">在CentOS7上安装Docker</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装Docker"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">安装Docker</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#查看当前内核版本，确认能否使用Docker"><span class="post-toc-number">1.0.0.1.1.</span> <span class="post-toc-text">查看当前内核版本，确认能否使用Docker</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#更新"><span class="post-toc-number">1.0.0.1.2.</span> <span class="post-toc-text">更新</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#卸载旧的Docker版本"><span class="post-toc-number">1.0.0.1.3.</span> <span class="post-toc-text">卸载旧的Docker版本</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装需求环境"><span class="post-toc-number">1.0.0.1.4.</span> <span class="post-toc-text">安装需求环境</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置yum源"><span class="post-toc-number">1.0.0.1.5.</span> <span class="post-toc-text">设置yum源</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装Docker-1"><span class="post-toc-number">1.0.0.1.6.</span> <span class="post-toc-text">安装Docker</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#启动Docker"><span class="post-toc-number">1.0.0.1.7.</span> <span class="post-toc-text">启动Docker</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#验证是否安装成功"><span class="post-toc-number">1.0.0.1.8.</span> <span class="post-toc-text">验证是否安装成功</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#将Docker加入开机启动"><span class="post-toc-number">1.0.0.1.9.</span> <span class="post-toc-text">将Docker加入开机启动</span></a></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第一步-安装依赖"><span class="post-toc-number">1.</span> <span class="post-toc-text">第一步 安装依赖</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二步-Clone-项目到本地"><span class="post-toc-number">2.</span> <span class="post-toc-text">第二步 Clone 项目到本地</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开始安装-WebVirtCloud"><span class="post-toc-number">3.</span> <span class="post-toc-text">开始安装 WebVirtCloud</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置-CentOS-上的-supervisor"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置 CentOS 上的 supervisor</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置-Nginx-配置文件"><span class="post-toc-number">5.</span> <span class="post-toc-text">配置 Nginx 配置文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装-libvirtd-以及其他主机的环境需求"><span class="post-toc-number">6.</span> <span class="post-toc-text">安装 libvirtd 以及其他主机的环境需求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#搞定！"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">搞定！</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -368,10 +368,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://piccdn.freejishu.com/images/2019/05/22/PnVOq3.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://piccdn.freejishu.com/images/2019/07/30/PnYVT0.jpg)">
     
             <p class="article-headline-p">
-                在CentOS7上安装Docker
+                KVM 管理工具之 WebVirtCloud 安装
             </p>
         </div>
 
@@ -390,7 +390,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>NiGHTMARE</strong>
-        <span>5月 22, 2019</span>
+        <span>7月 30, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -408,15 +408,6 @@
 
     <!-- Tags (bookmark) -->
     
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Docker/">Docker</a>
-    </li></ul>
-    
 
     <!-- Share -->
     
@@ -431,7 +422,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=在CentOS7上安装Docker&url=http://nightmare233.top/posts/272161d4.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=KVM 管理工具之 WebVirtCloud 安装&url=http://nightmare233.top/posts/faae2995.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -440,7 +431,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=在CentOS7上安装Docker&url=http://nightmare233.top/posts/272161d4.html&via=NiGHTMARE" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=KVM 管理工具之 WebVirtCloud 安装&url=http://nightmare233.top/posts/faae2995.html&via=NiGHTMARE" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -449,7 +440,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/272161d4.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/faae2995.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -458,7 +449,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/272161d4.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/faae2995.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -483,21 +474,41 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="在CentOS7上安装Docker"><a href="#在CentOS7上安装Docker" class="headerlink" title="在CentOS7上安装Docker"></a>在CentOS7上安装Docker</h1><p>Docker分为CE社区版与EE企业版，我们需要的是CE版本。</p>
-<p>CE版Docker按stable与edge两种方式发布更新，edge每月更新而stable每季度更新。</p>
-<h4 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h4><p>安装Docker需要CentOS内核版本高于3.10</p>
-<h5 id="查看当前内核版本，确认能否使用Docker"><a href="#查看当前内核版本，确认能否使用Docker" class="headerlink" title="查看当前内核版本，确认能否使用Docker"></a>查看当前内核版本，确认能否使用Docker</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
-<h5 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure>
-<h5 id="卸载旧的Docker版本"><a href="#卸载旧的Docker版本" class="headerlink" title="卸载旧的Docker版本"></a>卸载旧的Docker版本</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure>
-<h5 id="安装需求环境"><a href="#安装需求环境" class="headerlink" title="安装需求环境"></a>安装需求环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
-<p>yum-utils提供了yum的yum-config-manager</p>
-<p>device-mapper-persistent-data与lvm2是devicemapper驱动依赖</p>
-<h5 id="设置yum源"><a href="#设置yum源" class="headerlink" title="设置yum源"></a>设置yum源</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-<p>因为某些404的原因，直接访问官方源的速度极慢极慢，所以这里用的是阿里云的国内镜像源。</p>
-<h5 id="安装Docker-1"><a href="#安装Docker-1" class="headerlink" title="安装Docker"></a>安装Docker</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce</span><br></pre></td></tr></table></figure>
-<h5 id="启动Docker"><a href="#启动Docker" class="headerlink" title="启动Docker"></a>启动Docker</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-<h5 id="验证是否安装成功"><a href="#验证是否安装成功" class="headerlink" title="验证是否安装成功"></a>验证是否安装成功</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
-<h5 id="将Docker加入开机启动"><a href="#将Docker加入开机启动" class="headerlink" title="将Docker加入开机启动"></a>将Docker加入开机启动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
+        <p>KVM 是我们在公司中不可避免会用到的虚拟化技术 ，但是纯命令行Web页面的管理方法不够方便 ，不够“直觉”。所以就会有各种各样的 WEB 管理工具的出现，例如 OpenStack 、Pronebula 、oVirt 、WebVirtMgr 等 ，这次要介绍的就是 WebVirtMgr 的升级版本 <a href="https://github.com/retspen/webvirtcloud" target="_blank" rel="noopener">WebVirtCloud</a> 。</p>
+<p>WebVirtCloud 相比于 WebVirtMgr 的改变在于添加了用户管理，页面变更等，安装方式和配置管理在很多地方是相似的，如果有疑问的地方不妨去看看 WebVirtMgr 的解决方法 。</p>
+<p>那么接下来进入正篇，如何安装 WebVirtCloud ，安装环境为 CentOS7 ，系统纯净 ，安装方法 80% 参考官方文档 ，20% 源于各个博客 。</p>
+<h4 id="第一步-安装依赖"><a href="#第一步-安装依赖" class="headerlink" title="第一步 安装依赖"></a>第一步 安装依赖</h4><p>先安装 wget ，获取 eprl 源 ：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># yum -y install wget</span><br><span class="line"># wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo</span><br></pre></td></tr></table></figure>
+<p>  然后再安装环境依赖 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># sudo yum -y install python-virtualenv python-devel libvirt-devel glibc gcc nginx supervisor python-lxml git python-libguestfs python-pip policycoreutils-python vim</span><br></pre></td></tr></table></figure>
+<h4 id="第二步-Clone-项目到本地"><a href="#第二步-Clone-项目到本地" class="headerlink" title="第二步 Clone 项目到本地"></a>第二步 Clone 项目到本地</h4><p> 在根目录下创建目录 /srv ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># sudo mkdir /srv &amp;&amp; cd /srv</span><br></pre></td></tr></table></figure>
+<p>Clone 项目到本地 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># git clone https://github.com/retspen/webvirtcloud &amp;&amp; cd webvirtcloud</span><br></pre></td></tr></table></figure>
+<p>将配置文件模板复制一份作为设置 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cp webvirtcloud/settings.py.template webvirtcloud/settings.py</span><br></pre></td></tr></table></figure>
+<p>现在设置密匙，在这里我并没有生成一个密匙，而是偷懒自己设置了一个密匙，有需要的可以参考官方文档设置密匙 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## now put secret key to webvirtcloud/settings.py</span><br><span class="line"></span><br><span class="line"># sed -i &quot;s#SECRET_KEY = &apos;&apos;#SECRET_KEY = &apos;abcd12345&apos;#g&quot; /srv/webvirtcloud/webvirtcloud/settings.py</span><br></pre></td></tr></table></figure>
+<h4 id="开始安装-WebVirtCloud"><a href="#开始安装-WebVirtCloud" class="headerlink" title="开始安装 WebVirtCloud"></a>开始安装 WebVirtCloud</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># virtualenv venv</span><br><span class="line"># source venv/bin/activate</span><br><span class="line"># venv/bin/pip install -r conf/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple #这里使用了清华源</span><br><span class="line"># cp conf/nginx/webvirtcloud.conf /etc/nginx/conf.d/</span><br><span class="line"># venv/bin/python manage.py migrate</span><br></pre></td></tr></table></figure>
+<h4 id="配置-CentOS-上的-supervisor"><a href="#配置-CentOS-上的-supervisor" class="headerlink" title="配置 CentOS 上的 supervisor"></a>配置 CentOS 上的 supervisor</h4><p>修改配置文件 /etc/supervisord.conf ，在文件最末尾，也就是  [include] line (after files = …  actually); 之后 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[program:webvirtcloud]</span><br><span class="line">command=/srv/webvirtcloud/venv/bin/gunicorn webvirtcloud.wsgi:application -c /srv/webvirtcloud/gunicorn.conf.py</span><br><span class="line">directory=/srv/webvirtcloud</span><br><span class="line">user=nginx</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">redirect_stderr=true</span><br><span class="line"></span><br><span class="line">[program:novncd]</span><br><span class="line">command=/srv/webvirtcloud/venv/bin/python /srv/webvirtcloud/console/novncd</span><br><span class="line">directory=/srv/webvirtcloud</span><br><span class="line">user=nginx</span><br><span class="line">autostart=true</span><br><span class="line">autorestart=true</span><br><span class="line">redirect_stderr=true</span><br></pre></td></tr></table></figure>
+<h4 id="配置-Nginx-配置文件"><a href="#配置-Nginx-配置文件" class="headerlink" title="配置 Nginx 配置文件"></a>配置 Nginx 配置文件</h4><p>修改配置文件 /etc/nginx/nginx.conf ，参照如下样本修改 server 设置 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#    server &#123;</span><br><span class="line">#        listen       80 default_server;</span><br><span class="line">#        listen       [::]:80 default_server;</span><br><span class="line">#        server_name  _;</span><br><span class="line">#        root         /usr/share/nginx/html;</span><br><span class="line">#</span><br><span class="line">#        # Load configuration files for the default server block.</span><br><span class="line">#        include /etc/nginx/default.d/*.conf;</span><br><span class="line">#</span><br><span class="line">#        location / &#123;</span><br><span class="line">#        &#125;</span><br><span class="line">#</span><br><span class="line">#        error_page 404 /404.html;</span><br><span class="line">#            location = /40x.html &#123;</span><br><span class="line">#        &#125;</span><br><span class="line">#</span><br><span class="line">#        error_page 500 502 503 504 /50x.html;</span><br><span class="line">#            location = /50x.html &#123;</span><br><span class="line">#        &#125;</span><br><span class="line">#    &#125;</span><br><span class="line">#&#125;</span><br></pre></td></tr></table></figure>
+<p>同时修改  /etc/nginx/conf.d/webvirtcloud.conf 配置文件 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">upstream gunicorn_server &#123;</span><br><span class="line">    #server unix:/srv/webvirtcloud/venv/wvcloud.socket fail_timeout=0;</span><br><span class="line">    server 127.0.0.1:8000 fail_timeout=0;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line"></span><br><span class="line">    server_name servername.domain.com;</span><br><span class="line">    access_log /var/log/nginx/webvirtcloud-access_log; </span><br><span class="line"></span><br><span class="line">    location /static/ &#123;</span><br><span class="line">        root /srv/webvirtcloud;</span><br><span class="line">        expires max;</span><br><span class="line">    &#125;</span><br><span class="line">:：</span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass http://gunicorn_server;</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Forwarded-for $proxy_add_x_forwarded_for;</span><br><span class="line">        proxy_set_header Host $host:$server_port;</span><br><span class="line">        proxy_set_header X-Forwarded-Proto $remote_addr;</span><br><span class="line">        proxy_connect_timeout 600;</span><br><span class="line">        proxy_read_timeout 600;</span><br><span class="line">        proxy_send_timeout 600;</span><br><span class="line">        client_max_body_size 1024M;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>给予 nginx 读取 webvirtcloud 文件夹的权限 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># chown -R nginx:nginx /srv/webvirtcloud</span><br></pre></td></tr></table></figure>
+<p>修改selinux权限 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># semanage fcontext -a -t httpd_sys_content_t &quot;/srv/webvirtcloud(/.*)&quot;</span><br></pre></td></tr></table></figure>
+<p>创建新的管理用户并将用户加入 kvm 组 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># useradd webvirtcloud</span><br><span class="line"># echo &quot;123456&quot; | passwd --stdin webvirtcloud</span><br><span class="line"># usermod -G kvm -a webvirtcloud</span><br></pre></td></tr></table></figure>
+<h4 id="安装-libvirtd-以及其他主机的环境需求"><a href="#安装-libvirtd-以及其他主机的环境需求" class="headerlink" title="安装 libvirtd 以及其他主机的环境需求"></a>安装 libvirtd 以及其他主机的环境需求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># wget -O - https://clck.ru/9V9fH | sudo sh</span><br></pre></td></tr></table></figure>
+<p>开启服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl restart nginx &amp;&amp; systemctl restart supervisord</span><br></pre></td></tr></table></figure>
+<p>最终确定服务是否运行正常</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># supervisorctl status</span><br><span class="line">gstfsd             RUNNING   pid 24662, uptime 6:01:40</span><br><span class="line">novncd             RUNNING   pid 24661, uptime 6:01:40</span><br><span class="line">webvirtcloud       RUNNING   pid 24660, uptime 6:01:40</span><br></pre></td></tr></table></figure>
+<h5 id="搞定！"><a href="#搞定！" class="headerlink" title="搞定！"></a>搞定！</h5><p>访问 <a href="http://serverip" target="_blank" rel="noopener">http://serverip</a> 来使用 WebVirtCloud 服务 。</p>
+<p>如果不能访问就查看下 firewall 与 selinux 配置 。</p>
 
         
     
@@ -518,21 +529,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/posts/c956eb4a.html" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/posts/ea08642a.html" id="post_nav-older" class="next-content">
+        <a href="/posts/a14feaed.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
