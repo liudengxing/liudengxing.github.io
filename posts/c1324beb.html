@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Tue Jul 30 2019 16:50:31 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jul 31 2019 09:15:13 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jul 31 2019 09:22:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/posts/c1324beb.html",
     "headline": "KVM 管理工具之 VManagePlatform 安装",
     "datePublished": "Tue Jul 30 2019 16:50:31 GMT+0800",
-    "dateModified": "Wed Jul 31 2019 09:15:13 GMT+0800",
+    "dateModified": "Wed Jul 31 2019 09:22:31 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -485,7 +485,8 @@
 <h4 id="四-、配置-Libvirt-使用-tcp-方式连接"><a href="#四-、配置-Libvirt-使用-tcp-方式连接" class="headerlink" title="四 、配置 Libvirt 使用 tcp 方式连接"></a>四 、配置 Libvirt 使用 tcp 方式连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/sysconfig/libvirtd</span><br><span class="line">LIBVIRTD_CONFIG=/etc/libvirt/libvirtd.conf</span><br><span class="line">LIBVIRTD_ARGS=&quot;--listen&quot;</span><br><span class="line"></span><br><span class="line"># vim /etc/libvirt/libvirtd.conf #最后添加</span><br><span class="line">  listen_tls = 0</span><br><span class="line">  listen_tcp = 1</span><br><span class="line">  tcp_port = &quot;16509&quot;</span><br><span class="line">  listen_addr = &quot;0.0.0.0&quot;</span><br><span class="line">  auth_tcp = &quot;none&quot;</span><br><span class="line"># systemctl restart libvirtd</span><br></pre></td></tr></table></figure>
 <h4 id="五-、配置SSH信任"><a href="#五-、配置SSH信任" class="headerlink" title="五 、配置SSH信任"></a>五 、配置SSH信任</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ssh-keygen -t  rsa #生成SSH证书</span><br><span class="line"># ssh-copy-id -i ~/.ssh/id_rsa.pub  root@ipaddress #将SSH证书传递到目标主机上 ，实现SSH免密连接</span><br></pre></td></tr></table></figure>
 <h3 id="六-、安装数据库-（-MySQL-，Redis-）"><a href="#六-、安装数据库-（-MySQL-，Redis-）" class="headerlink" title="六 、安装数据库 （ MySQL ，Redis ）"></a>六 、安装数据库 （ MySQL ，Redis ）</h3><p>参考我的两篇文章</p>
-<p><a href>CentOS 离线安装 MySQL</a></p>
+<p><a href="https://nightmare233.top/posts/8d1db23b.html">CentOS 离线安装 MySQL</a></p>
+<p><a href="https://nightmare233.top/posts/4c767999.html">CentOS 安装 Redis5.0.3</a></p>
 
         
     
