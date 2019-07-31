@@ -46,7 +46,7 @@
     
     <title>
         
-            Git使用指南 | 
+            CentOS 离线安装 MySQL | 
         
         六等星的小宇宙
     </title>
@@ -57,7 +57,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="Blog,Git">
+    <meta name="keywords" content="Blog">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -218,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="六等星的小宇宙">
-    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/74add858.html">
+    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/8d1db23b.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="六等星的小宇宙">
@@ -233,16 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://nightmare233.top/posts/74add858.html">
+    <meta property="og:url" content="http://nightmare233.top/posts/8d1db23b.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Git使用指南 | 六等星的小宇宙">
+    <meta property="og:title" content="CentOS 离线安装 MySQL | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="Git"> 
+    
 
     
-        <meta property="article:published_time" content="Fri Apr 12 2019 14:30:07 GMT+0800">
-        <meta property="article:modified_time" content="Tue Apr 23 2019 19:08:41 GMT+0800">
+        <meta property="article:published_time" content="Wed Jul 31 2019 08:50:15 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jul 31 2019 09:05:03 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://nightmare233.top/posts/74add858.html">
+        <link rel="canonical" href="http://nightmare233.top/posts/8d1db23b.html">
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://nightmare233.top/posts/74add858.html",
-    "headline": "Git使用指南",
-    "datePublished": "Fri Apr 12 2019 14:30:07 GMT+0800",
-    "dateModified": "Tue Apr 23 2019 19:08:41 GMT+0800",
+    "mainEntityOfPage": "http://nightmare233.top/posts/8d1db23b.html",
+    "headline": "CentOS 离线安装 MySQL",
+    "datePublished": "Wed Jul 31 2019 08:50:15 GMT+0800",
+    "dateModified": "Wed Jul 31 2019 09:05:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -283,7 +283,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",GitBlog",
+    "keywords": "Blog",
     "description": "",
 }
 </script>
@@ -348,7 +348,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Git使用指南"><span class="post-toc-number">1.</span> <span class="post-toc-text">Git使用指南</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Git常用指令"><span class="post-toc-number">2.</span> <span class="post-toc-text">Git常用指令</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一-、卸载系统自带的-mariadb-libs"><span class="post-toc-number">1.</span> <span class="post-toc-text">一 、卸载系统自带的 mariadb-libs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二-、安装-MySQL"><span class="post-toc-number">2.</span> <span class="post-toc-text">二 、安装 MySQL</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三-、数据库初始化"><span class="post-toc-number">3.</span> <span class="post-toc-text">三 、数据库初始化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#报错解决"><span class="post-toc-number">4.</span> <span class="post-toc-text">报错解决</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#如果出现-："><span class="post-toc-number">4.1.</span> <span class="post-toc-text">如果出现 ：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#解决方法-："><span class="post-toc-number">4.2.</span> <span class="post-toc-text">解决方法 ：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#如果出现-：-1"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">如果出现 ：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#解决方法-：-1"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">解决方法 ：</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -367,11 +367,20 @@
                 
     <!-- Paradox Post Header -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://piccdn.freejishu.com/images/2019/04/19/PnxEkA.jpg)">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
     
             <p class="article-headline-p">
-                Git使用指南
+                CentOS 离线安装 MySQL
             </p>
         </div>
 
@@ -390,7 +399,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>NiGHTMARE</strong>
-        <span>4月 12, 2019</span>
+        <span>7月 31, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -408,15 +417,6 @@
 
     <!-- Tags (bookmark) -->
     
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Git/">Git</a>
-    </li></ul>
-    
 
     <!-- Share -->
     
@@ -431,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Git使用指南&url=http://nightmare233.top/posts/74add858.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CentOS 离线安装 MySQL&url=http://nightmare233.top/posts/8d1db23b.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -440,7 +440,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Git使用指南&url=http://nightmare233.top/posts/74add858.html&via=NiGHTMARE" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CentOS 离线安装 MySQL&url=http://nightmare233.top/posts/8d1db23b.html&via=NiGHTMARE" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -449,7 +449,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/74add858.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/8d1db23b.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -458,7 +458,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/74add858.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/8d1db23b.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -483,16 +483,72 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Git使用指南"><a href="#Git使用指南" class="headerlink" title="Git使用指南"></a>Git使用指南</h1><p><em>这是六等星的小宇宙的第 9 篇文章<br>写作时间 : 30分钟<br>总字数 : 293字<br>预计阅读时间 : 1分钟</em></p>
-<p><br></p>
-<h1 id="Git常用指令"><a href="#Git常用指令" class="headerlink" title="Git常用指令"></a>Git常用指令</h1><p>创建Git仓库<br><code>git init</code></p>
-<p>添加文件<br><code>git add filename</code><br><code>git add .</code>是提交所有修改  </p>
-<p>提交文件到仓库<br><code>git commit -m &quot;new file&quot;</code><br>-m指令为添加解释，即这个版本做了什么  </p>
-<p>查看历史记录<br><code>git log</code></p>
-<p>版本回退<br><code>git reset</code></p>
-<p>查看修改状态<br><code>git status</code></p>
-<p>添加远程仓库<br><code>git remote add origin address</code><br>之后就可以直接用<br><code>git push</code><br>命令推送本地分支到远程<br><code>git clone</code><br>则是拉取远程分支到本地  </p>
-<p>删除绑定的远程仓库<br><code>git remote remove name</code></p>
+        <p>在 CentOS 默认源中不包含 mysql 之后，在线安装 mysql 就变得不稳定，并且在线安装并不适合大批量安装，所以我就研究了 mysql 的离线安装技巧 。</p>
+<p>首先在 mysql 官网上下载最新的 mysql 安装包，我是用的是 8.0.16 版本 。</p>
+<p>共需要四个文件 ：</p>
+<ul>
+<li>mysql-community-common-8.0.16-2.el7.x86_64.rpm</li>
+<li>mysql-community-libs-compat-8.0.16-2.el7.x86_64.rpm</li>
+<li>mysql-community-client-8.0.16-2.el7.x86_64.rpm</li>
+<li>mysql-community-server-8.0.16-2.el7.x86_64.rpm</li>
+</ul>
+<p>下好了就可以开始安装了 。</p>
+<h4 id="一-、卸载系统自带的-mariadb-libs"><a href="#一-、卸载系统自带的-mariadb-libs" class="headerlink" title="一 、卸载系统自带的 mariadb-libs"></a>一 、卸载系统自带的 mariadb-libs</h4><p>查看 mariadb 包并写在 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep mariadb</span><br><span class="line"></span><br><span class="line">rpm -e --nodeps mariadb-libs-5.5.60-1.el7_5.x86_64</span><br></pre></td></tr></table></figure>
+<h4 id="二-、安装-MySQL"><a href="#二-、安装-MySQL" class="headerlink" title="二 、安装 MySQL"></a>二 、安装 MySQL</h4><p>将下好的四个安装包上传到服务器后，推荐使用一键安装 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh *.rpm --nodeps --force</span><br></pre></td></tr></table></figure>
+<p>如果需要手动安装一定要按照我上面给出的顺序安装 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh mysql-community-common-8.0.16-2.el7.x86_64.rpm</span><br><span class="line">rpm -ivh mysql-community-libs-compat-8.0.16-2.el7.x86_64.rpm</span><br><span class="line">rpm -ivh mysql-community-client-8.0.16-2.el7.x86_64.rpm</span><br><span class="line">rpm -ivh mysql-community-server-8.0.16-2.el7.x86_64.rpm</span><br></pre></td></tr></table></figure>
+<p>安装完成后启动服务 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
+<p>之后就可以愉快的使用了 ~</p>
+<h4 id="三-、数据库初始化"><a href="#三-、数据库初始化" class="headerlink" title="三 、数据库初始化"></a>三 、数据库初始化</h4><p>数据库初始化 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --user=mysql</span><br></pre></td></tr></table></figure>
+<p>初始化会生成一个随机密码 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &apos;temporary password&apos; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+<p>复制这个随机码用于登录mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+<p>登录后设置新密码 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;新密码&apos;;</span><br></pre></td></tr></table></figure>
+<p>下次登录时使用新密码登录即可 。</p>
+<p>完成 ！</p>
+<h4 id="报错解决"><a href="#报错解决" class="headerlink" title="报错解决"></a>报错解决</h4><h5 id="如果出现-："><a href="#如果出现-：" class="headerlink" title="如果出现 ："></a>如果出现 ：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MySQL 8.0+ 密码问题 ERROR 1045 (28000): Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: YES)</span><br></pre></td></tr></table></figure>
+<p>那就是你的密码错了 ，或者你是空密码但是没有设置允许空密码登录 。</p>
+<h5 id="解决方法-："><a href="#解决方法-：" class="headerlink" title="解决方法 ："></a>解决方法 ：</h5><p>先将 mysql 切到无需密码的登录模式 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br></pre></td></tr></table></figure>
+<p>在最后加上 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure>
+<p>重启 mysql 服务 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
+<p>这时候就可以直接登陆了 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+<p>选择 mysql 数据库 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br></pre></td></tr></table></figure>
+<p>查看用户表 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select host,user,plugin,authentication_string from mysql.user;</span><br></pre></td></tr></table></figure>
+<p>可以看到 mysql8.0 之后都是使用 authentication_string 来保存密码，且加密格式为 caching_sha2_password  。</p>
+<p>我们将 root 的密码设为空 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE mysql.user SET authentication_string=&apos;&apos; WHERE user=&apos;root&apos; and host=&apos;localhost&apos;;</span><br></pre></td></tr></table></figure>
+<p>退出 mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+<p>将上面加上的配置选项删去 。</p>
+<p>重启 mysql 服务 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
+<p>无密码登录 mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+<p>选择数据库 mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
+<p>修改 root 密码 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#caching_sha2_password 加密</span><br><span class="line">ALTER user &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH caching_sha2_password BY &apos;root&apos;;</span><br><span class="line">#mysql_native_password 加密</span><br><span class="line">ALTER user &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;</span><br></pre></td></tr></table></figure>
+<p>退出mysql，之后使用新密码登录即可 。</p>
+<h5 id="如果出现-：-1"><a href="#如果出现-：-1" class="headerlink" title="如果出现 ："></a>如果出现 ：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">连接报 caching-sha2-password 验证错误</span><br></pre></td></tr></table></figure>
+<h5 id="解决方法-：-1"><a href="#解决方法-：-1" class="headerlink" title="解决方法 ："></a>解决方法 ：</h5><p>登录 mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
+<p>选择数据库 mysql ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
+<p>修改 root 密码使用 mysql_native_password 加密  ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#mysql_native_password 加密</span><br><span class="line">ALTER user &apos;root&apos;@&apos;localhost&apos; IDENTIFIED WITH mysql_native_password BY &apos;root&apos;;</span><br></pre></td></tr></table></figure>
+<p>退出mysql，之后再次连接即可 。</p>
 
         
     
@@ -513,21 +569,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/posts/687287dc.html" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/posts/e89df735.html" id="post_nav-older" class="next-content">
+        <a href="/posts/c1324beb.html" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
