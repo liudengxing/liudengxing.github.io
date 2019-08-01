@@ -46,7 +46,7 @@
     
     <title>
         
-            归档: 2019/6 | 
+            Centos7 安装 Docker | 
         
         六等星的小宇宙
     </title>
@@ -218,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="六等星的小宇宙">
-    <meta name="msapplication-starturl" content="http://nightmare233.top/archives/2019/06/">
+    <meta name="msapplication-starturl" content="http://nightmare233.top/posts/69d36aac.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="六等星的小宇宙">
@@ -233,13 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://nightmare233.top/archives/2019/06/">
+    <meta property="og:url" content="http://nightmare233.top/posts/69d36aac.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2019/6 | 六等星的小宇宙">
+    <meta property="og:title" content="Centos7 安装 Docker | 六等星的小宇宙">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
     
 
+    
+        <meta property="article:published_time" content="Thu Aug 01 2019 09:36:22 GMT+0800">
+        <meta property="article:modified_time" content="Thu Aug 01 2019 11:08:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,13 +250,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://nightmare233.top/archives/2019/06/index.html">
+        <link rel="canonical" href="http://nightmare233.top/posts/69d36aac.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://nightmare233.top/posts/69d36aac.html",
+    "headline": "Centos7 安装 Docker",
+    "datePublished": "Thu Aug 01 2019 09:36:22 GMT+0800",
+    "dateModified": "Thu Aug 01 2019 11:08:58 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "NiGHTMARE",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "六等星的小宇宙",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "Blog",
+    "description": "",
+}
+</script>
 
 
     
@@ -287,96 +320,238 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装Docker依赖环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装Docker依赖环境</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装-Docker"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装 Docker</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="https://piccdn.freejishu.com/images/2019/06/27/PnYdBI.jpg">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://piccdn.freejishu.com/images/2019/08/01/PnYBQh.jpg)">
+    
+            <p class="article-headline-p">
+                Centos7 安装 Docker
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>NiGHTMARE</strong>
+        <span>8月 01, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
     
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/posts/c956eb4a.html">真正的捷径</a></p>
-    </div>
+    <!-- Tags (bookmark) -->
+    
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这一个月来，我一直在接触一些工具，例如Docker，Docker的仓库管理平台Harbor，开源软件系统5kcrm，Zentao，现在正在做的，测试...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/posts/c956eb4a.html" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="NiGHTMARE's avatar">
-            </div>
-            <div>
-                <strong>NiGHTMARE</strong>
-                <span>6月 27, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/思维构建/">思维构建</a>
-              </span>
-            
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
 
-            
+    
 
-            
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Centos7 安装 Docker&url=http://nightmare233.top/posts/69d36aac.html&pic=http://nightmare233.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
 
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Centos7 安装 Docker&url=http://nightmare233.top/posts/69d36aac.html&via=NiGHTMARE" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://nightmare233.top/posts/69d36aac.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://nightmare233.top/posts/69d36aac.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
 </div>
 
-            
-            
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><em>这是六等星的第 26 篇文章</em></p>
+<p> Docker 方式的虚拟化在这几年异军突起 ，也逐渐被各个公司所接受并使用 ，我们就来看看 Docker 该怎么安装吧 。</p>
+<p>首先我们来选择 Docker 发行版本 ，Docker 分为 CE 社区版与 EE 企业版，我们选择的是 CE 版本。</p>
+<p>CE 版 Docker 分为 stable 与 edge 两种方式发布更新 ，edge 每月更新 、stable 每季度更新。</p>
+<h4 id="安装Docker依赖环境"><a href="#安装Docker依赖环境" class="headerlink" title="安装Docker依赖环境"></a>安装Docker依赖环境</h4><p>Docker 要求 CentOS 内核版本高于 3.10 ，首先查看当前内核版本，确认能否使用 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># uname -r</span><br><span class="line">3.10.0-957.el7.x86_64</span><br></pre></td></tr></table></figure>
+<p>更新系统软件 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure>
+<p>如果之前安装过 Docker 的话还需要卸载旧的 Docker ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure>
+<p>安装 Docker 环境 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">已安装:</span><br><span class="line">  yum-utils.noarch 0:1.1.31-50.el7                                                          </span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">  libxml2-python.x86_64 0:2.9.1-6.el7_2.3       python-chardet.noarch 0:2.2.1-1.el7_1      </span><br><span class="line">  python-kitchen.noarch 0:1.1.1-5.el7          </span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure>
+<ul>
+<li>yum-utils 提供了 yum 的 yum-config-manager</li>
+<li>device-mapper-persistent-data 与 lvm2 是 devicemapper 驱动依赖</li>
+</ul>
+<p>设置 yum Docker 源为阿里云源 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@MiWiFi-R1CM-srv ~]# yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line">adding repo from: http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">grabbing file http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo</span><br><span class="line">repo saved to /etc/yum.repos.d/docker-ce.repo</span><br></pre></td></tr></table></figure>
+<p>因为某些 404 的原因，直接访问官方源的速度极慢极慢，所以这里用的是阿里云的国内镜像源 。</p>
+<p>附上官方源 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+<h4 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h4><p>安装 Docker 本体 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># yum -y install docker-ce</span><br><span class="line">....</span><br><span class="line"></span><br><span class="line">已安装:</span><br><span class="line">  docker-ce.x86_64 3:18.09.6-3.el7                                                          </span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">  audit-libs-python.x86_64 0:2.8.4-4.el7    checkpolicy.x86_64 0:2.5-8.el7                  </span><br><span class="line">  container-selinux.noarch 2:2.95-2.el7_6   containerd.io.x86_64 0:1.2.5-3.1.el7            </span><br><span class="line">  docker-ce-cli.x86_64 1:18.09.6-3.el7      libcgroup.x86_64 0:0.41-20.el7                  </span><br><span class="line">  libsemanage-python.x86_64 0:2.5-14.el7    policycoreutils-python.x86_64 0:2.5-29.el7_6.1  </span><br><span class="line">  python-IPy.noarch 0:0.75-6.el7            setools-libs.x86_64 0:3.3.8-4.el7</span><br></pre></td></tr></table></figure>
+<p>启动 Docker ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># systemctl start docker</span><br></pre></td></tr></table></figure>
+<p>验证是否安装成功 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># docker version</span><br><span class="line"></span><br><span class="line">Client: Docker Engine - Community</span><br><span class="line"> Version:           19.03.1</span><br><span class="line"> API version:       1.40</span><br><span class="line"> Go version:        go1.12.5</span><br><span class="line"> Git commit:        74b1e89</span><br><span class="line"> Built:             Thu Jul 25 21:21:07 2019</span><br><span class="line"> OS/Arch:           linux/amd64</span><br><span class="line"> Experimental:      false</span><br><span class="line"></span><br><span class="line">Server: Docker Engine - Community</span><br><span class="line"> Engine:</span><br><span class="line">  Version:          19.03.1</span><br><span class="line">  API version:      1.40 (minimum version 1.12)</span><br><span class="line">  Go version:       go1.12.5</span><br><span class="line">  Git commit:       74b1e89</span><br><span class="line">  Built:            Thu Jul 25 21:19:36 2019</span><br><span class="line">  OS/Arch:          linux/amd64</span><br><span class="line">  Experimental:     false</span><br><span class="line"> containerd:</span><br><span class="line">  Version:          1.2.6</span><br><span class="line">  GitCommit:        894b81a4b802e4eb2a91d1ce216b8817763c29fb</span><br><span class="line"> runc:</span><br><span class="line">  Version:          1.0.0-rc8</span><br><span class="line">  GitCommit:        425e105d5a03fabd737a126ad93d62a9eeede87f</span><br><span class="line"> docker-init:</span><br><span class="line">  Version:          0.18.0</span><br><span class="line">  GitCommit:        fec3683</span><br></pre></td></tr></table></figure>
+<p>将Docker加入开机启动 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable docker</span><br><span class="line"></span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.</span><br></pre></td></tr></table></figure>
+<p>搞定 ！</p>
+<p>Docker 已经安装完成啦 ~</p>
+
         
     
 
     
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/posts/bcbaf749.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/posts/4c767999.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
