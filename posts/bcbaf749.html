@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Thu Aug 01 2019 09:36:27 GMT+0800">
-        <meta property="article:modified_time" content="Thu Aug 01 2019 11:17:37 GMT+0800">
+        <meta property="article:modified_time" content="Thu Aug 01 2019 11:27:59 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/posts/bcbaf749.html",
     "headline": "Centos7 安装 Harbor",
     "datePublished": "Thu Aug 01 2019 09:36:27 GMT+0800",
-    "dateModified": "Thu Aug 01 2019 11:17:37 GMT+0800",
+    "dateModified": "Thu Aug 01 2019 11:27:59 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -475,6 +475,18 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <p><em>这是六等星的第 27 篇文章</em></p>
+<p>Docker 仓库的解决方法大体上有这几种 ：</p>
+<ul>
+<li><p>Registry</p>
+<p>Registry 是 Docker 官方提供的本地私有仓库服务镜像 。</p>
+</li>
+<li><p>Portus</p>
+<p>基于 Docker Registry API （ V2 ） 的开源前端与授权工具，最低 registry 版本要求为 2.1 ，可以作为授权服务器与用户界面 。</p>
+</li>
+<li><p>harbor</p>
+<p>Vmware 公司开发，包括了权限管理 ( RBAC ) 、 LDAP 、审计、管理界面、自我注册、HA 等企业必需的功能，同时针对中国用户的特点，设计镜像复制和中文支持等功能  。</p>
+</li>
+</ul>
 <p>Docker 私有仓库解决方案中最常用的一种就是使用 Harbor 来搭建企业级的私有仓库 。  </p>
 <p>本文就来介绍如何安装 Harbor 来实现私有仓库 。  </p>
 <p>首先需要确保服务器已经安装好 Docker 环境 ，然后开始安装流程 。  </p>
