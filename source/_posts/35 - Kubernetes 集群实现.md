@@ -1,9 +1,10 @@
 ---
 title: Kubernetes 集群实现
+thumbnail: 'https://piccdn.freejishu.com/images/2019/12/06/PnwTAu.jpg'
+abbrlink: f4a00965
 date: 2019-12-06 15:41:55
 tags:
 categories:
-thumbnail: https://piccdn.freejishu.com/images/2019/12/06/PnwTAu.jpg
 ---
 
 # Kubernetes 集群实现
