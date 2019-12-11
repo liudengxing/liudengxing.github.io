@@ -1,16 +1,17 @@
 ---
 title: Kubernetes 模块总结
+thumbnail: 'https://piccdn.freejishu.com/images/2019/12/11/Pnw9Lb.jpg'
+abbrlink: 35665e5f
 date: 2019-12-11 10:14:08
 tags:
 categories:
-thumbnail: https://piccdn.freejishu.com/images/2019/12/11/Pnw9Lb.jpg
 ---
 
 本文参考 : [Kubernetes核心概念总结](https://www.cnblogs.com/zhenyuyaodidiao/p/6500720.html)
 
 Kubernetes (以下简称 K8s) 由一个主节点 Master 和多个从节点 Node 构成 
 
-![img](https://images2015.cnblogs.com/blog/704717/201703/704717-20170304103633345-155330022.png)
+![img](https://piccdn.freejishu.com/images/2019/12/11/PnwMU5.png)
 
 ### 1. 基本架构
 
@@ -91,7 +92,7 @@ Pod 是 K8s 的基础操作单元，是应用运行的载体 。K8s 的系统是
 
 Pod 被分配到一个 Node 上之后 ，知道被删除前不会离开这个 Node 。当某个 Pod 失败 ，首先会被Kubernetes 清理掉 ，之后 ReplicationController 将会在其它机器上（或本机）重建 Pod ，重建之后Pod 的 ID 发生了变化 ，那将会是一个新的 Pod 。所以，Kubernetes 中 Pod 的迁移，实际指的是在新 Node 上重建 Pod 。以下给出 Pod 的生命周期图 。
 
-![img](https://images2015.cnblogs.com/blog/704717/201703/704717-20170304103856954-1091445106.png)
+![img](https://piccdn.freejishu.com/images/2019/12/11/PnwE4R.png)
 
 
 
