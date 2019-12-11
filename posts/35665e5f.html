@@ -242,7 +242,7 @@
 
     
         <meta property="article:published_time" content="Wed Dec 11 2019 10:14:08 GMT+0800">
-        <meta property="article:modified_time" content="Wed Dec 11 2019 10:19:13 GMT+0800">
+        <meta property="article:modified_time" content="Wed Dec 11 2019 10:34:38 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -265,7 +265,7 @@
     "mainEntityOfPage": "http://nightmare233.top/posts/35665e5f.html",
     "headline": "Kubernetes 模块总结",
     "datePublished": "Wed Dec 11 2019 10:14:08 GMT+0800",
-    "dateModified": "Wed Dec 11 2019 10:19:13 GMT+0800",
+    "dateModified": "Wed Dec 11 2019 10:34:38 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "NiGHTMARE",
@@ -476,7 +476,7 @@
     
         <p>本文参考 : <a href="https://www.cnblogs.com/zhenyuyaodidiao/p/6500720.html" target="_blank" rel="noopener">Kubernetes核心概念总结</a></p>
 <p>Kubernetes (以下简称 K8s) 由一个主节点 Master 和多个从节点 Node 构成 </p>
-<p><img src="https://images2015.cnblogs.com/blog/704717/201703/704717-20170304103633345-155330022.png" alt="img"></p>
+<p><img src="https://piccdn.freejishu.com/images/2019/12/11/PnwMU5.png" alt="img"></p>
 <h3 id="1-基本架构"><a href="#1-基本架构" class="headerlink" title="1. 基本架构"></a>1. 基本架构</h3><h4 id="Master"><a href="#Master" class="headerlink" title="Master"></a>Master</h4><p>Master 节点由四个模块组成 ，分别是 APIserver, scheduler, manager, etcd </p>
 <p><strong>APIserver</strong> 负责对外提供 RESTful 的 K8s API 服务 ，是系统管理指令的统一入口 ， 任何对于资源的增删改查都需要交给 APIserver 处理后再交给 etcd 。如架构图所示 ，kubectl（K8s 提供的客户端工具 ，工具内部就是对 K8s API 的调用）是直接和 APIserver 交互的 。</p>
 <p><strong>schedule</strong> 负责调度 pod 到合适的 Node 上 ，schedule 根据 pod 的需求以及 Node 的状态将 pod 部署到合适的 Node 上 。K8s 提供了默认的调度算法 ，也保留了可供自定义调度算法的接口 。</p>
@@ -501,7 +501,7 @@
 <p>　　Pod被分配到Node之后会根据镜像下载策略进行镜像下载，可以根据自身集群的特点来决定采用何种下载策略。无论何种策略，都要确保Node上有正确的镜像可用。</p>
 <p><strong>Pod 的生命周期</strong></p>
 <p>Pod 被分配到一个 Node 上之后 ，知道被删除前不会离开这个 Node 。当某个 Pod 失败 ，首先会被Kubernetes 清理掉 ，之后 ReplicationController 将会在其它机器上（或本机）重建 Pod ，重建之后Pod 的 ID 发生了变化 ，那将会是一个新的 Pod 。所以，Kubernetes 中 Pod 的迁移，实际指的是在新 Node 上重建 Pod 。以下给出 Pod 的生命周期图 。</p>
-<p><img src="https://images2015.cnblogs.com/blog/704717/201703/704717-20170304103856954-1091445106.png" alt="img"></p>
+<p><img src="https://piccdn.freejishu.com/images/2019/12/11/PnwE4R.png" alt="img"></p>
 <p>Pod 的生命周期函数有两个 ，一个是 PostStart (容器创建成功后调用) , PreStop ( 容器终止前调用 ) </p>
 <h3 id="3-Replication-Controller"><a href="#3-Replication-Controller" class="headerlink" title="3. Replication Controller"></a>3. Replication Controller</h3><p>Replication Controller (Rc) 是 K8s 的另一个核心概念 ，RC 保证应用在托管在 K8s 之后能保证持续运行 ，它会确保任何时间 K8s 中都有指定的 Pod 在运行 。此外还提供了滚动升级 ，升级回滚等高级功能 。</p>
 <p><strong>Label</strong> </p>
