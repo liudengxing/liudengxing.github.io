@@ -1,5 +1,6 @@
 ---
 title: Mysql Decimal 格式数据探索
+abbrlink: 8cfb7bd8
 date: 2019-12-24 16:49:37
 tags:
 categories:
@@ -19,8 +20,8 @@ Decimal 是 Mysql 的一种高精度数据类型 ，最大可达 128 bit ，在�
 
 对数据的声明语法为 DECIMAL(M,D) , 取值如下 :
 
-- M 是最大位数，最大 65 ，默认为 10
-- D 是小数位 ，最大 30 ，默认为 0
+- M (Maximum number) 是最大位数，最大 65 ，默认为 10
+- D (Digits) 是小数位 ，最大 30 ，默认为 0
 
 其中 M 包含有 D ，也就是 整数的大小是 M - D ，例如 DECIMAL(6,2) 代表最大存储位数为 6 ，其中包含 4 位整数位与 2 位小数位 ，取值范围是 -9999.99 - 9999.99 ，超出取值范围会报错 “ Out of range”
 
